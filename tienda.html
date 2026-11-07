@@ -1,0 +1,1925 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tienda online · Fruta de temporada en Ibi | Frutería Jiménez</title>
+<meta name="description" content="Reserva online tu fruta de temporada en Frutería Jiménez (Ibi, Alicante). Elige, envía tu reserva por WhatsApp y recógela en tienda o recíbela en casa.">
+<meta name="theme-color" content="#2F5D3A">
+
+<!-- Open Graph / redes sociales -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Frutería Jiménez">
+<meta property="og:title" content="Frutería Jiménez · Fruta de temporada, reservada desde casa">
+<meta property="og:description" content="La fruta de temporada de cada mes en Ibi. Haz tu reserva por WhatsApp y recógela en tienda o te la llevamos a casa.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=1200&h=630&q=75">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Frutería Jiménez · Fruta de temporada">
+<meta name="twitter:description" content="Reserva tu fruta de temporada por WhatsApp. Recogida en tienda o reparto en Ibi.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "GroceryStore",
+  "name": "Frutería Jiménez",
+  "description": "Frutería de barrio en Ibi: fruta y verdura fresca de temporada y de proximidad.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "C. Jaime I el Conquistador, 42",
+    "postalCode": "03440",
+    "addressLocality": "Ibi",
+    "addressRegion": "Alicante",
+    "addressCountry": "ES"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "14:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "17:00", "closes": "20:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "14:00" }
+  ]
+}
+</script>
+
+<style>
+/* =========================================================
+   VARIABLES (mismas que la web principal)
+   ========================================================= */
+:root{
+  --cream:#FBF7EE;
+  --cream-2:#F4EDDC;
+  --paper:#FFFDF8;
+  --leaf:#2F5D3A;
+  --leaf-dark:#1F4029;
+  --olive:#6E7B3B;
+  --sage:#DCE5CF;
+  --orange:#E8772E;
+  --tomato:#D64527;
+  --lemon:#F2C94C;
+  --wa:#25D366;
+  --ink:#23271F;
+  --muted:#5E6555;
+  --line:rgba(47,93,58,.14);
+  --radius:22px;
+  --radius-sm:14px;
+  --shadow:0 10px 30px -12px rgba(31,64,41,.25);
+  --shadow-lg:0 24px 50px -18px rgba(31,64,41,.35);
+  --serif:"Fraunces", Georgia, "Times New Roman", serif;
+  --sans:"Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --ease:cubic-bezier(.2,.7,.2,1);
+  --header-h:68px;
+}
+
+/* =========================================================
+   BASE
+   ========================================================= */
+*,*::before,*::after{box-sizing:border-box}
+html{overflow-x:clip;scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:calc(var(--header-h) + 12px)}
+body{
+  margin:0;font-family:var(--sans);font-size:16px;line-height:1.6;color:var(--ink);
+  background:var(--cream);-webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.1;margin:0;letter-spacing:-.01em}
+p{margin:0}
+.container{width:100%;max-width:1160px;margin:0 auto;padding:0 20px}
+section{position:relative}
+.section{padding:76px 0}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--olive);
+}
+.eyebrow::before{content:"";width:22px;height:2px;background:var(--orange);border-radius:2px}
+.section-title{font-size:clamp(2rem,6.5vw,3.2rem);margin:12px 0 14px;color:var(--leaf-dark)}
+.section-title em{font-style:italic;color:var(--orange);font-weight:600}
+.section-lead{color:var(--muted);max-width:56ch;font-size:1.05rem}
+[hidden]{display:none!important}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+:focus-visible{outline:3px solid var(--lemon);outline-offset:2px}
+
+/* Botones */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:15px 24px;border-radius:999px;border:0;cursor:pointer;
+  font:600 1rem/1 var(--sans);text-decoration:none;
+  transition:transform .25s var(--ease), box-shadow .25s var(--ease), background .25s, opacity .25s;
+  -webkit-tap-highlight-color:transparent;
+}
+.btn svg{width:20px;height:20px;flex:none}
+.btn:active{transform:scale(.97)}
+.btn[disabled]{opacity:.45;cursor:not-allowed;transform:none!important;box-shadow:none}
+.btn-primary{background:var(--orange);color:#fff;box-shadow:0 10px 24px -8px rgba(232,119,46,.6)}
+.btn-primary:hover{background:#d9661d;transform:translateY(-2px)}
+.btn-ghost{background:rgba(255,255,255,.14);color:#fff;border:1.5px solid rgba(255,255,255,.55);backdrop-filter:blur(6px)}
+.btn-ghost:hover{background:rgba(255,255,255,.24);transform:translateY(-2px)}
+.btn-green{background:var(--leaf);color:#fff}
+.btn-green:hover{background:var(--leaf-dark);transform:translateY(-2px)}
+.btn-wa{background:var(--wa);color:#fff;box-shadow:0 12px 26px -10px rgba(18,140,70,.6)}
+.btn-wa:hover{background:#1ebe5b;transform:translateY(-2px)}
+.btn-line{background:transparent;color:var(--leaf-dark);border:1.5px solid var(--line)}
+.btn-line:hover{background:var(--sage)}
+.btn-block{width:100%}
+
+/* =========================================================
+   CABECERA
+   ========================================================= */
+.header{
+  position:fixed;inset:0 0 auto 0;z-index:50;height:var(--header-h);
+  background:rgba(251,247,238,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  box-shadow:0 1px 0 var(--line);display:flex;align-items:center;
+}
+.header .container{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.wordmark{
+  font-family:var(--serif);font-weight:700;font-size:1.35rem;letter-spacing:-.02em;
+  text-decoration:none;color:var(--leaf-dark);line-height:1;display:flex;flex-direction:column;
+}
+.wordmark small{
+  font-family:var(--sans);font-size:.6rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
+  margin-top:5px;color:var(--olive);
+}
+.wordmark .dot{color:var(--orange)}
+.nav{display:none}
+.nav a{text-decoration:none;color:var(--ink);font-weight:500;font-size:.95rem;padding:8px 12px;border-radius:999px;transition:background .25s}
+.nav a:hover{background:var(--sage)}
+.head-right{display:flex;align-items:center;gap:8px}
+.back-link{
+  display:none;align-items:center;gap:6px;text-decoration:none;font-size:.9rem;font-weight:600;color:var(--leaf);
+  padding:8px 12px;border-radius:999px;
+}
+.back-link:hover{background:var(--sage)}
+.cart-btn{
+  position:relative;display:inline-flex;align-items:center;gap:8px;height:46px;padding:0 16px 0 13px;border-radius:999px;border:0;cursor:pointer;
+  background:var(--leaf);color:#fff;font-weight:600;font-size:.95rem;
+  box-shadow:0 8px 20px -10px rgba(31,64,41,.7);transition:transform .25s var(--ease),background .25s;
+  -webkit-tap-highlight-color:transparent;
+}
+.cart-btn:hover{background:var(--leaf-dark)}
+.cart-btn svg{width:22px;height:22px}
+.cart-btn .total{font-variant-numeric:tabular-nums}
+.badge{
+  position:absolute;top:-5px;left:28px;min-width:22px;height:22px;padding:0 6px;border-radius:999px;
+  background:var(--orange);color:#fff;font-size:.75rem;font-weight:700;display:grid;place-items:center;
+  border:2px solid var(--cream);transform:scale(0);transition:transform .3s var(--ease);
+}
+.badge.show{transform:scale(1)}
+.cart-btn.bump{animation:bump .5s var(--ease)}
+@keyframes bump{30%{transform:scale(1.12)}60%{transform:scale(.96)}100%{transform:scale(1)}}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+.hero{
+  color:#fff;overflow:hidden;background:var(--leaf-dark);
+  padding:calc(var(--header-h) + 56px) 0 56px;
+}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);animation:heroZoom 14s var(--ease) forwards}
+@keyframes heroZoom{to{transform:scale(1)}}
+.hero-bg::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(20,38,25,.62) 0%,rgba(20,38,25,.45) 40%,rgba(20,38,25,.9) 100%);
+}
+.hero .container{position:relative;z-index:1}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(8px);
+  padding:8px 14px;border-radius:999px;font-size:.82rem;font-weight:500;margin-bottom:20px;
+}
+.hero-badge .pulse{width:8px;height:8px;border-radius:50%;background:var(--lemon);box-shadow:0 0 0 0 rgba(242,201,76,.7);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(242,201,76,0)}100%{box-shadow:0 0 0 0 rgba(242,201,76,0)}}
+.hero h1{font-size:clamp(2.4rem,10vw,4.8rem);font-weight:600;max-width:14ch;letter-spacing:-.025em}
+.hero h1 em{font-style:italic;color:var(--lemon);font-weight:400}
+.hero p.lead{font-size:clamp(1.02rem,3.4vw,1.2rem);max-width:46ch;margin:18px 0 28px;color:rgba(255,255,255,.88)}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
+.hero-ctas .btn{flex:1 1 auto}
+.steps-mini{
+  list-style:none;margin:34px 0 0;padding:20px 0 0;border-top:1px solid rgba(255,255,255,.2);
+  display:grid;gap:12px;counter-reset:s;
+}
+.steps-mini li{display:flex;align-items:center;gap:12px;font-size:.95rem;color:rgba(255,255,255,.9)}
+.steps-mini li::before{
+  counter-increment:s;content:counter(s);flex:none;width:30px;height:30px;border-radius:50%;
+  display:grid;place-items:center;background:var(--lemon);color:var(--leaf-dark);font:700 .9rem var(--sans);
+}
+
+/* =========================================================
+   CATÁLOGO
+   ========================================================= */
+.shop{background:var(--paper)}
+.shop-head{display:flex;flex-direction:column;gap:18px;margin-bottom:28px}
+.shop-head .section-title{margin-bottom:8px}
+.notice{
+  display:flex;gap:10px;align-items:flex-start;background:#FFF6DA;border:1px solid #F1DE9C;color:#6B5413;
+  padding:12px 14px;border-radius:var(--radius-sm);font-size:.9rem;line-height:1.45;
+}
+.notice svg{flex:none;width:18px;height:18px;margin-top:2px}
+.toolbar{display:flex;flex-direction:column;gap:12px}
+.search{
+  position:relative;display:flex;align-items:center;
+}
+.search svg{position:absolute;left:16px;width:18px;height:18px;color:var(--muted);pointer-events:none}
+.search input{
+  width:100%;height:50px;border-radius:999px;border:1.5px solid var(--line);background:#fff;
+  padding:0 18px 0 44px;font-size:1rem;transition:border-color .2s, box-shadow .2s;
+}
+.search input:focus{outline:none;border-color:var(--leaf);box-shadow:0 0 0 4px rgba(47,93,58,.12)}
+.chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin:0 -20px;padding:2px 20px}
+.chips::-webkit-scrollbar{display:none}
+.chip{
+  flex:none;border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:9px 16px;
+  font-size:.9rem;font-weight:500;cursor:pointer;transition:background .2s,color .2s,border-color .2s;
+  -webkit-tap-highlight-color:transparent;
+}
+.chip:hover{border-color:var(--leaf)}
+.chip[aria-pressed="true"]{background:var(--leaf);border-color:var(--leaf);color:#fff}
+
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.product{
+  background:#fff;border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;
+  box-shadow:0 1px 0 var(--line),0 8px 24px -18px rgba(31,64,41,.35);
+  transition:transform .35s var(--ease),box-shadow .35s var(--ease);
+}
+.product:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.media{position:relative;aspect-ratio:1/1;background:var(--tint,#EEE);overflow:hidden}
+.media .fallback{
+  position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;
+  background:
+    radial-gradient(circle at 30% 25%,rgba(255,255,255,.65),transparent 55%),
+    var(--tint,#EEE);
+}
+.media .fallback .em{font-size:clamp(2.6rem,12vw,3.6rem);line-height:1;filter:drop-shadow(0 8px 10px rgba(0,0,0,.12))}
+.media .fallback .nm{font:italic 600 1rem var(--serif);color:rgba(31,64,41,.55);padding:0 10px;text-align:center}
+.media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.product:hover .media img{transform:scale(1.06)}
+.tag{
+  position:absolute;left:10px;top:10px;z-index:1;display:inline-flex;align-items:center;gap:5px;
+  font-size:.7rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
+  background:rgba(255,253,248,.94);color:var(--leaf-dark);padding:5px 9px;border-radius:999px;
+}
+.tag.local{background:var(--lemon);color:var(--leaf-dark)}
+.tag.out{background:var(--tomato);color:#fff}
+.in-cart{
+  position:absolute;right:10px;top:10px;z-index:1;width:30px;height:30px;border-radius:50%;
+  background:var(--leaf);color:#fff;display:grid;place-items:center;transform:scale(0);transition:transform .3s var(--ease);
+}
+.in-cart svg{width:16px;height:16px}
+.product.has .in-cart{transform:scale(1)}
+.p-body{padding:14px 14px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.p-origin{font-size:.72rem;color:var(--olive);font-weight:600;letter-spacing:.02em;display:flex;gap:5px;align-items:flex-start;line-height:1.3}
+.p-origin svg{flex:none;width:12px;height:12px;margin-top:1px}
+.p-name{font-size:1.15rem;color:var(--leaf-dark);line-height:1.15}
+.p-desc{font-size:.84rem;color:var(--muted);line-height:1.45;display:none}
+.p-price{display:flex;align-items:baseline;gap:4px;margin-top:auto;padding-top:6px}
+.p-price strong{font:700 1.3rem var(--serif);color:var(--ink);font-variant-numeric:tabular-nums}
+.p-price span{font-size:.82rem;color:var(--muted)}
+.p-actions{display:flex;flex-direction:column;gap:8px;margin-top:6px}
+.stepper{
+  display:flex;align-items:center;justify-content:space-between;background:var(--cream);border-radius:999px;padding:4px;
+}
+.stepper button{
+  width:36px;height:36px;border-radius:50%;border:0;background:#fff;cursor:pointer;display:grid;place-items:center;
+  color:var(--leaf-dark);font-size:1.2rem;font-weight:600;box-shadow:0 1px 3px rgba(0,0,0,.08);
+  transition:background .2s,transform .15s;-webkit-tap-highlight-color:transparent;
+}
+.stepper button:hover{background:var(--sage)}
+.stepper button:active{transform:scale(.9)}
+.stepper button[disabled]{opacity:.35;cursor:not-allowed}
+.stepper output{font-weight:600;font-size:.92rem;font-variant-numeric:tabular-nums;text-align:center;flex:1;white-space:nowrap}
+.add-btn{padding:12px 14px;font-size:.92rem;width:100%}
+.add-btn.added{background:var(--leaf)}
+.product.out .media{filter:grayscale(.85);opacity:.7}
+.product.out .p-actions{opacity:.6}
+
+.tag.pack{background:var(--orange);color:#fff}
+.alert{
+  position:absolute;left:10px;bottom:10px;z-index:1;display:inline-flex;align-items:center;gap:5px;
+  font-size:.72rem;font-weight:700;line-height:1.2;padding:5px 10px;border-radius:999px;
+  background:var(--tomato);color:#fff;box-shadow:0 6px 14px -6px rgba(214,69,39,.8);
+}
+.alert.soft{background:var(--orange);box-shadow:0 6px 14px -6px rgba(232,119,46,.8)}
+.p-contents{display:block;margin-top:6px;font-size:.8rem;color:var(--leaf-dark)}
+.product.is-pack{grid-column:1/-1}
+.product.is-pack .media{aspect-ratio:16/9}
+.product.is-pack .p-desc{display:block}
+
+.empty{
+  grid-column:1/-1;text-align:center;padding:50px 20px;color:var(--muted);
+  border:2px dashed var(--line);border-radius:var(--radius);
+}
+.empty strong{display:block;font:600 1.3rem var(--serif);color:var(--leaf-dark);margin-bottom:6px}
+
+/* Lo que llega el mes que viene */
+.coming{
+  margin-top:36px;background:var(--cream);border-radius:var(--radius);padding:22px 20px;
+  display:flex;flex-direction:column;gap:12px;
+}
+.coming h3{font-size:1.25rem;color:var(--leaf-dark)}
+.coming h3 em{color:var(--orange);font-style:italic}
+.coming ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.coming li{background:#fff;border-radius:999px;padding:7px 13px;font-size:.88rem;font-weight:500;box-shadow:0 1px 0 var(--line)}
+
+/* =========================================================
+   CÓMO FUNCIONA
+   ========================================================= */
+.how{background:var(--cream)}
+.how-grid{display:grid;gap:14px;margin-top:34px}
+.how-step{
+  background:var(--paper);border-radius:var(--radius);padding:24px 22px;position:relative;overflow:hidden;
+  box-shadow:0 1px 0 var(--line);transition:transform .35s var(--ease),box-shadow .35s var(--ease);
+}
+.how-step:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.how-step .n{
+  font:italic 600 3.4rem/1 var(--serif);color:var(--sage);position:absolute;right:18px;top:12px;
+}
+.how-step .ic{
+  width:52px;height:52px;border-radius:16px;display:grid;place-items:center;margin-bottom:16px;
+  background:var(--sage);color:var(--leaf);
+}
+.how-step:nth-child(2) .ic{background:#FCE3CF;color:var(--orange)}
+.how-step:nth-child(3) .ic{background:#FBEDBF;color:#9A7409}
+.how-step .ic svg{width:26px;height:26px}
+.how-step h3{font-size:1.35rem;color:var(--leaf-dark);margin-bottom:6px}
+.how-step p{color:var(--muted);font-size:.95rem}
+.delivery-grid{display:grid;gap:14px;margin-top:14px}
+.delivery{
+  border-radius:var(--radius);padding:22px;display:flex;gap:16px;align-items:flex-start;
+  background:var(--leaf);color:var(--cream);
+}
+.delivery.alt{background:var(--orange);color:#fff}
+.delivery svg{flex:none;width:30px;height:30px;color:var(--lemon)}
+.delivery.alt svg{color:#fff}
+.delivery h3{font-size:1.25rem;margin-bottom:4px}
+.delivery p{font-size:.93rem;opacity:.9}
+
+/* =========================================================
+   OPINIONES
+   ========================================================= */
+.reviews{background:var(--cream-2)}
+.rev-head{display:flex;flex-direction:column;gap:16px}
+.rev-score{display:flex;align-items:center;gap:12px;font-weight:600;color:var(--leaf-dark)}
+.rev-score .big{font:700 2.6rem/1 var(--serif)}
+.stars{color:var(--lemon);letter-spacing:2px;font-size:1.05rem;filter:drop-shadow(0 1px 0 rgba(0,0,0,.12))}
+.rev-grid{display:grid;gap:14px;margin-top:28px}
+.rev{background:#fff;border-radius:var(--radius);padding:22px;box-shadow:0 1px 0 var(--line);display:flex;flex-direction:column;gap:10px}
+.rev p{color:var(--ink);font-size:.98rem}
+.rev footer{font-size:.85rem;color:var(--muted);font-weight:600}
+.rev-empty{
+  margin-top:28px;background:#fff;border-radius:var(--radius);padding:30px 22px;text-align:center;
+  display:flex;flex-direction:column;align-items:center;gap:14px;box-shadow:0 1px 0 var(--line);
+}
+.rev-empty .big{font-size:2.6rem}
+.rev-empty h3{font-size:1.5rem;color:var(--leaf-dark)}
+.rev-empty p{color:var(--muted);max-width:44ch}
+
+/* =========================================================
+   PREGUNTAS FRECUENTES
+   ========================================================= */
+.faq{background:var(--paper)}
+.faq-list{margin-top:30px;display:grid;gap:10px;max-width:820px}
+.faq details{
+  background:#fff;border-radius:var(--radius-sm);box-shadow:0 1px 0 var(--line),0 6px 18px -16px rgba(31,64,41,.4);
+  overflow:hidden;
+}
+.faq summary{
+  list-style:none;cursor:pointer;padding:18px 54px 18px 20px;position:relative;
+  font:600 1.08rem/1.35 var(--serif);color:var(--leaf-dark);-webkit-tap-highlight-color:transparent;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+  content:"";position:absolute;right:20px;top:50%;width:22px;height:22px;margin-top:-11px;border-radius:50%;
+  background:var(--sage) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232F5D3A' stroke-width='3' stroke-linecap='round'%3E%3Cpath d='M12 6v12M6 12h12'/%3E%3C/svg%3E") center/12px no-repeat;
+  transition:transform .3s var(--ease),background-color .3s;
+}
+.faq details[open] summary::after{transform:rotate(45deg);background-color:var(--lemon)}
+.faq .answer{padding:0 20px 20px;color:var(--muted);font-size:.97rem}
+.faq .answer p+p{margin-top:8px}
+
+/* =========================================================
+   VISÍTANOS + FOOTER
+   ========================================================= */
+.visit{background:var(--cream)}
+.visit-grid{display:grid;gap:18px;margin-top:30px}
+.map-card{border-radius:var(--radius);overflow:hidden;background:#fff;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.map-card iframe{width:100%;height:300px;border:0;display:block;filter:saturate(.85)}
+.map-consent{
+  min-height:300px;flex:1;display:grid;place-content:center;justify-items:center;gap:14px;text-align:center;padding:24px;
+  background:linear-gradient(135deg,var(--sage),#EFF3E4);color:var(--leaf-dark);
+}
+.map-consent p{max-width:34ch;font-size:.93rem}
+.map-info{padding:18px 20px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+.map-info p{font-weight:600;color:var(--leaf-dark)}
+.hours-card{background:var(--paper);border-radius:var(--radius);padding:24px 22px;box-shadow:0 1px 0 var(--line)}
+.status{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.92rem;padding:8px 14px;border-radius:999px;background:var(--sage);color:var(--leaf-dark);margin-bottom:16px}
+.status .d{width:9px;height:9px;border-radius:50%;background:var(--leaf)}
+.status.closed{background:#F9DDD6;color:var(--tomato)}
+.status.closed .d{background:var(--tomato)}
+.days{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.days li{display:flex;justify-content:space-between;gap:12px;padding:10px 12px;border-radius:12px;font-size:.95rem}
+.days li .h{font-variant-numeric:tabular-nums;color:var(--muted);text-align:right}
+.days li.off .h{color:var(--tomato)}
+.days li.today{background:var(--leaf);color:#fff;font-weight:600}
+.days li.today .h{color:var(--lemon)}
+
+.footer{background:var(--leaf-dark);color:rgba(251,247,238,.8);padding:60px 0 120px;font-size:.95rem}
+.footer-grid{display:grid;gap:34px}
+.footer .wordmark{color:var(--cream);font-size:1.9rem}
+.footer .wordmark small{color:var(--lemon)}
+.footer .wordmark .dot{color:var(--lemon)}
+.footer p.tag-line{margin-top:14px;max-width:34ch}
+.footer h4{font:700 .75rem var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--lemon);margin:0 0 14px}
+.footer ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.footer a{text-decoration:none;color:var(--cream);transition:color .2s}
+.footer a:hover{color:var(--lemon)}
+.footer li{display:flex;gap:10px;align-items:flex-start}
+.footer li svg{flex:none;width:18px;height:18px;margin-top:3px;color:var(--lemon)}
+.socials{display:flex;gap:10px;margin-top:18px}
+.socials a{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:rgba(251,247,238,.1);transition:background .25s,transform .25s}
+.socials a:hover{background:var(--orange);color:#fff;transform:translateY(-2px)}
+.socials svg{width:20px;height:20px}
+.legal-links{display:flex;flex-wrap:wrap;gap:4px 16px}
+.footer-bottom{
+  margin-top:44px;padding-top:22px;border-top:1px solid rgba(251,247,238,.14);
+  display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;font-size:.85rem;color:rgba(251,247,238,.6);
+}
+
+/* =========================================================
+   FLOTANTES: WhatsApp + barra de cesta (móvil)
+   ========================================================= */
+.fab{
+  position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:60;
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--wa);color:#fff;text-decoration:none;font-weight:700;font-size:.92rem;
+  padding:12px 16px 12px 13px;border-radius:999px;
+  box-shadow:0 14px 30px -10px rgba(18,140,70,.65),0 4px 10px rgba(0,0,0,.12);
+  transition:transform .3s var(--ease),bottom .4s var(--ease);
+  animation:fabIn .7s .6s var(--ease) both;-webkit-tap-highlight-color:transparent;
+}
+.fab svg{width:24px;height:24px;flex:none}
+.fab:hover{transform:translateY(-3px) scale(1.03)}
+@keyframes fabIn{from{opacity:0;transform:translateY(30px) scale(.8)}to{opacity:1;transform:none}}
+body.has-bar .fab{bottom:calc(90px + env(safe-area-inset-bottom))}
+
+.cart-bar{
+  position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:55;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  background:var(--leaf-dark);color:#fff;border:0;border-radius:20px;padding:12px 14px 12px 16px;cursor:pointer;
+  box-shadow:0 18px 40px -14px rgba(20,38,25,.7);text-align:left;
+  transform:translateY(140%);transition:transform .45s var(--ease);-webkit-tap-highlight-color:transparent;
+}
+body.has-bar .cart-bar{transform:none}
+.cart-bar .l{display:flex;flex-direction:column;line-height:1.25}
+.cart-bar .l small{font-size:.78rem;opacity:.75}
+.cart-bar .l strong{font:700 1.15rem var(--serif);font-variant-numeric:tabular-nums}
+.cart-bar .r{display:inline-flex;align-items:center;gap:6px;background:var(--orange);padding:11px 16px;border-radius:999px;font-weight:600;font-size:.92rem}
+.cart-bar .r svg{width:18px;height:18px}
+
+/* =========================================================
+   PANEL DE LA CESTA (inferior en móvil, lateral en escritorio)
+   ========================================================= */
+.overlay{
+  position:fixed;inset:0;z-index:80;background:rgba(20,38,25,.5);backdrop-filter:blur(3px);
+  opacity:0;pointer-events:none;transition:opacity .35s var(--ease);
+}
+.drawer{
+  position:fixed;z-index:90;left:0;right:0;bottom:0;max-height:92svh;height:92svh;
+  background:var(--paper);border-radius:26px 26px 0 0;display:flex;flex-direction:column;
+  transform:translateY(105%);transition:transform .45s var(--ease);
+  box-shadow:0 -20px 50px -20px rgba(20,38,25,.45);
+}
+.cart-open .overlay{opacity:1;pointer-events:auto}
+.cart-open .drawer{transform:none}
+.cart-open{overflow:hidden}
+.drawer-handle{width:44px;height:5px;border-radius:5px;background:rgba(31,64,41,.18);margin:10px auto 0;flex:none}
+.drawer-head{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 20px 14px;
+  border-bottom:1px solid var(--line);flex:none;
+}
+.drawer-head h2{font-size:1.5rem;color:var(--leaf-dark);display:flex;align-items:center;gap:10px}
+.drawer-head h2 .count{font:600 .8rem var(--sans);background:var(--sage);color:var(--leaf-dark);padding:3px 9px;border-radius:999px}
+.icon-btn{
+  width:42px;height:42px;border-radius:50%;border:0;background:var(--cream-2);cursor:pointer;display:grid;place-items:center;
+  color:var(--leaf-dark);transition:background .2s;flex:none;-webkit-tap-highlight-color:transparent;
+}
+.icon-btn:hover{background:var(--sage)}
+.icon-btn svg{width:20px;height:20px}
+.view{display:none;flex-direction:column;flex:1;min-height:0}
+.view.active{display:flex;animation:viewIn .4s var(--ease)}
+@keyframes viewIn{from{opacity:0;transform:translateX(16px)}to{opacity:1;transform:none}}
+.view-scroll{flex:1;overflow-y:auto;padding:16px 20px;overscroll-behavior:contain}
+.view-foot{flex:none;padding:14px 20px calc(16px + env(safe-area-inset-bottom));border-top:1px solid var(--line);background:#fff;display:grid;gap:10px}
+
+.lines{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.line{display:grid;grid-template-columns:64px 1fr;gap:12px;align-items:start;background:#fff;border-radius:18px;padding:10px;box-shadow:0 1px 0 var(--line)}
+.line .thumb{width:64px;height:64px;border-radius:14px;overflow:hidden;position:relative;background:var(--tint,#eee);display:grid;place-items:center;font-size:1.9rem}
+.line .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.line .info{display:flex;flex-direction:column;gap:6px;min-width:0}
+.line .top{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}
+.line h3{font-size:1.05rem;color:var(--leaf-dark);line-height:1.2}
+.line .unit{font-size:.8rem;color:var(--muted)}
+.line .bottom{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.line .stepper{padding:3px;min-width:136px}
+.line .stepper button{width:32px;height:32px;font-size:1.05rem}
+.line .sub{font:700 1.05rem var(--serif);font-variant-numeric:tabular-nums;white-space:nowrap}
+.remove{border:0;background:none;cursor:pointer;color:var(--muted);padding:4px;border-radius:8px;display:grid;place-items:center;transition:color .2s,background .2s}
+.remove:hover{color:var(--tomato);background:#FBE5DF}
+.remove svg{width:18px;height:18px}
+
+.cart-empty{text-align:center;padding:40px 10px;display:flex;flex-direction:column;align-items:center;gap:10px}
+.cart-empty .big{font-size:3.4rem}
+.cart-empty h3{font-size:1.5rem;color:var(--leaf-dark)}
+.cart-empty p{color:var(--muted);max-width:30ch}
+
+.totals{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.totals span{color:var(--muted);font-size:.95rem}
+.totals strong{font:700 1.6rem var(--serif);color:var(--leaf-dark);font-variant-numeric:tabular-nums}
+.minimum{font-size:.88rem;color:var(--tomato);font-weight:500;display:none}
+.minimum.show{display:block}
+.meter{height:6px;border-radius:6px;background:var(--cream-2);overflow:hidden;margin-top:6px}
+.meter i{display:block;height:100%;background:var(--orange);border-radius:6px;transition:width .4s var(--ease)}
+.foot-note{font-size:.78rem;color:var(--muted);text-align:center;line-height:1.4}
+
+/* Formulario */
+.form{display:grid;gap:16px}
+.field{display:grid;gap:6px}
+.field label,.legend{font-weight:600;font-size:.92rem;color:var(--leaf-dark)}
+.field label .opt{font-weight:400;color:var(--muted)}
+.field input,.field select,.field textarea{
+  width:100%;border:1.5px solid var(--line);background:#fff;border-radius:14px;padding:13px 14px;font-size:1rem;
+  transition:border-color .2s,box-shadow .2s;-webkit-appearance:none;appearance:none;
+}
+.field select{
+  background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232F5D3A' stroke-width='2.5' stroke-linecap='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") right 14px center/18px no-repeat;
+  padding-right:42px;
+}
+.field input[type="date"]{min-height:50px}
+.field textarea{min-height:84px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--leaf);box-shadow:0 0 0 4px rgba(47,93,58,.12)}
+.field.invalid input,.field.invalid select,.field.invalid textarea{border-color:var(--tomato);box-shadow:0 0 0 4px rgba(214,69,39,.1)}
+.err{font-size:.82rem;color:var(--tomato);display:none}
+.field.invalid .err{display:block}
+.hint{font-size:.8rem;color:var(--muted)}
+.consent{display:grid;gap:6px}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:.86rem;color:var(--muted);line-height:1.45;cursor:pointer}
+.check input{width:20px;height:20px;margin-top:1px;flex:none;accent-color:var(--leaf);cursor:pointer}
+.check a{color:var(--leaf);font-weight:600}
+.consent.invalid .check{color:var(--tomato)}
+.consent.invalid .err{display:block}
+.row2{display:grid;gap:16px}
+.choice{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.choice label{
+  position:relative;display:flex;flex-direction:column;gap:4px;padding:14px;border-radius:16px;border:1.5px solid var(--line);
+  background:#fff;cursor:pointer;transition:border-color .2s,background .2s,box-shadow .2s;font-weight:600;color:var(--leaf-dark);font-size:.95rem;
+}
+.choice label small{font-weight:400;color:var(--muted);font-size:.78rem;line-height:1.35}
+.choice label svg{width:24px;height:24px;color:var(--orange);margin-bottom:2px}
+.choice input{position:absolute;opacity:0;pointer-events:none}
+.choice input:checked + label{border-color:var(--leaf);background:#F2F6EC;box-shadow:0 0 0 3px rgba(47,93,58,.12)}
+.choice input:focus-visible + label{outline:3px solid var(--lemon);outline-offset:2px}
+.collapse{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s var(--ease)}
+.collapse > div{overflow:hidden}
+.collapse.open{grid-template-rows:1fr}
+.summary{background:var(--cream);border-radius:16px;padding:14px 16px;font-size:.9rem;display:grid;gap:6px}
+.summary .s-row{display:flex;justify-content:space-between;gap:10px}
+.summary .s-row span:last-child{font-variant-numeric:tabular-nums;white-space:nowrap}
+.summary .s-total{border-top:1px dashed rgba(31,64,41,.2);padding-top:8px;margin-top:2px;font-weight:700;color:var(--leaf-dark)}
+
+/* Confirmación */
+.done{text-align:center;display:flex;flex-direction:column;align-items:center;gap:14px;padding:30px 6px}
+.done .check{
+  width:84px;height:84px;border-radius:50%;background:var(--sage);color:var(--leaf);display:grid;place-items:center;
+  animation:pop .6s var(--ease);
+}
+.done .check svg{width:42px;height:42px}
+@keyframes pop{0%{transform:scale(.4);opacity:0}60%{transform:scale(1.08);opacity:1}100%{transform:scale(1)}}
+.done h3{font-size:1.75rem;color:var(--leaf-dark)}
+.done p{color:var(--muted);max-width:34ch}
+.done .ref{font-size:.85rem;background:var(--cream);padding:8px 14px;border-radius:999px;color:var(--leaf-dark);font-weight:600}
+
+/* Toast */
+.toast{
+  position:fixed;left:50%;top:calc(var(--header-h) + 12px);z-index:100;transform:translate(-50%,-20px);opacity:0;pointer-events:none;
+  background:var(--leaf-dark);color:#fff;padding:12px 18px;border-radius:999px;font-weight:500;font-size:.92rem;
+  box-shadow:var(--shadow-lg);transition:transform .35s var(--ease),opacity .35s;max-width:calc(100% - 32px);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* =========================================================
+   ANIMACIONES DE SCROLL
+   ========================================================= */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:var(--d,0s)}
+.reveal.visible{opacity:1;transform:none}
+
+/* =========================================================
+   RESPONSIVE (mobile-first → tablet → escritorio)
+   ========================================================= */
+@media (max-width:380px){
+  .cart-btn .total{display:none}
+  .grid{gap:10px}
+  .p-body{padding:12px 11px 14px}
+  .stepper button{width:32px;height:32px}
+}
+@media (min-width:600px){
+  .container{padding:0 28px}
+  .chips{margin:0;padding:2px 0;flex-wrap:wrap}
+  .grid{grid-template-columns:repeat(2,1fr);gap:18px}
+  .p-desc{display:block}
+  .hero-ctas .btn{flex:0 0 auto}
+  .steps-mini{grid-template-columns:repeat(3,auto);justify-content:start;gap:12px 28px}
+  .row2{grid-template-columns:1fr 1fr}
+  .how-grid{grid-template-columns:repeat(3,1fr)}
+  .delivery-grid{grid-template-columns:1fr 1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .coming{flex-direction:row;align-items:center;gap:20px}
+  .product.is-pack{grid-column:auto}
+  .product.is-pack .media{aspect-ratio:1/1}
+  .rev-grid{grid-template-columns:repeat(2,1fr)}
+  .coming h3{flex:none}
+}
+@media (min-width:760px){
+  .grid{grid-template-columns:repeat(3,1fr)}
+}
+@media (min-width:900px){
+  :root{--header-h:76px}
+  .section{padding:110px 0}
+  .nav{display:flex;gap:4px}
+  .back-link{display:inline-flex}
+  .hero{padding:calc(var(--header-h) + 90px) 0 90px}
+  .shop-head{flex-direction:row;align-items:flex-end;justify-content:space-between}
+  .shop-head > div:first-child{max-width:560px}
+  .toolbar{min-width:340px}
+  .rev-head{flex-direction:row;align-items:flex-end;justify-content:space-between}
+  .rev-grid{grid-template-columns:repeat(3,1fr)}
+  .map-consent{min-height:340px}
+  .visit-grid{grid-template-columns:1.3fr 1fr;align-items:stretch}
+  .map-card iframe{height:100%;min-height:340px;flex:1}
+  .footer{padding-bottom:60px}
+  .footer-grid{grid-template-columns:1.4fr 1fr 1fr}
+  /* En escritorio la cesta es un panel lateral */
+  .drawer{
+    left:auto;top:0;bottom:0;right:0;width:440px;max-height:none;height:auto;border-radius:26px 0 0 26px;
+    transform:translateX(105%);
+  }
+  .drawer-handle{display:none}
+  .drawer-head{padding-top:22px}
+  body.has-bar .fab{bottom:calc(16px + env(safe-area-inset-bottom))}
+  .cart-bar{display:none}
+}
+@media (min-width:1100px){
+  .grid{grid-template-columns:repeat(4,1fr)}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ===================== CABECERA ===================== -->
+<header class="header" id="header">
+  <div class="container">
+    <a href="index.html" class="wordmark" aria-label="Frutería Jiménez, volver a la web principal">
+      <span>Frutería Jiménez<span class="dot">.</span></span>
+      <small>Tienda online</small>
+    </a>
+    <nav class="nav" aria-label="Tienda">
+      <a href="#catalogo">Fruta del mes</a>
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#opiniones">Opiniones</a>
+      <a href="#preguntas">Preguntas</a>
+      <a href="#visitanos">Visítanos</a>
+    </nav>
+    <div class="head-right">
+      <a class="back-link" href="index.html">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Web
+      </a>
+      <button class="cart-btn" id="cartBtn" type="button" aria-label="Abrir la cesta" aria-controls="drawer" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 9h14l-1.4 9.1a2 2 0 0 1-2 1.7H8.4a2 2 0 0 1-2-1.7L5 9z"/><path d="M9 9V7a3 3 0 0 1 6 0v2"/><path d="M3 9h18"/></svg>
+        <span class="total js-cart-total">0,00 €</span>
+        <span class="badge js-cart-count" aria-hidden="true">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="inicio">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=1800&q=75"
+         alt="Cajas de fruta y verdura fresca en un puesto de mercado" fetchpriority="high" onerror="this.style.display='none'">
+  </div>
+  <div class="container">
+    <span class="hero-badge"><span class="pulse"></span><span id="heroBadge">Fruta de temporada</span></span>
+    <h1>Tu fruta de temporada, <em>reservada</em> desde casa.</h1>
+    <p class="lead">Elige lo que te apetece, envíanos la reserva por WhatsApp y nosotros te la preparamos a mano: recógela en la tienda o te la llevamos a casa en Ibi.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="#catalogo" id="heroCta">Ver la fruta del mes</a>
+      <a class="btn btn-ghost" href="#como-funciona">Cómo funciona</a>
+    </div>
+    <ol class="steps-mini">
+      <li>Llena tu cesta</li>
+      <li>Reserva por WhatsApp</li>
+      <li>Recoge o recibe en casa</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===================== CATÁLOGO ===================== -->
+<section class="section shop" id="catalogo">
+  <div class="container">
+    <div class="shop-head">
+      <div class="reveal">
+        <span class="eyebrow">Tienda online</span>
+        <h2 class="section-title">Fruta de temporada · <em id="monthName">este mes</em></h2>
+        <p class="section-lead" id="monthLead">Solo lo que está en su mejor momento. El catálogo cambia solo cada mes.</p>
+      </div>
+      <div class="toolbar reveal" style="--d:.1s">
+        <label class="search">
+          <span class="sr-only">Buscar fruta</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input type="search" id="search" placeholder="Busca: caqui, granada, uva…" autocomplete="off">
+        </label>
+        <div class="chips" role="group" aria-label="Filtrar">
+          <button class="chip" type="button" data-filter="todo" aria-pressed="true">Todo</button>
+          <button class="chip" type="button" data-filter="pack" aria-pressed="false">Cestas y packs</button>
+          <button class="chip" type="button" data-filter="cerca" aria-pressed="false">De aquí</button>
+          <button class="chip" type="button" data-filter="kg" aria-pressed="false">Por kilo</button>
+          <button class="chip" type="button" data-filter="pieza" aria-pressed="false">Por pieza o bandeja</button>
+        </div>
+      </div>
+    </div>
+
+    <p class="notice reveal">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+      <span>Los precios son orientativos; el importe final se confirma al pesar la fruta. No pagas nada ahora: pagas al recoger o al recibir tu pedido.</span>
+    </p>
+
+    <div class="grid" id="grid" style="margin-top:22px" aria-live="polite"></div>
+
+    <div class="coming reveal" id="coming" hidden>
+      <h3>El mes que viene llega: <em id="nextMonth"></em></h3>
+      <ul id="comingList"></ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CÓMO FUNCIONA ===================== -->
+<section class="section how" id="como-funciona">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">Sin pagos online</span>
+      <h2 class="section-title">Así de <em>fácil</em> es reservar</h2>
+      <p class="section-lead">Como cuando nos llamas para que te apartemos algo, pero con la cesta ya hecha.</p>
+    </div>
+    <div class="how-grid">
+      <article class="how-step reveal">
+        <span class="n">1</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 9h14l-1.4 9.1a2 2 0 0 1-2 1.7H8.4a2 2 0 0 1-2-1.7L5 9z"/><path d="M9 9V7a3 3 0 0 1 6 0v2"/></svg></div>
+        <h3>Llena tu cesta</h3>
+        <p>Elige la fruta de temporada y la cantidad. Si algo lo quieres más maduro o más verde, nos lo dices en las observaciones.</p>
+      </article>
+      <article class="how-step reveal" style="--d:.1s">
+        <span class="n">2</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.8 14.13c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.27.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.61.47.24.56.79 1.92.86 2.06.07.14.11.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.56.16.27.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.27.14.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.23.61-.14.25.09 1.58.75 1.85.88.27.14.45.2.52.32.07.11.07.66-.17 1.33z"/></svg></div>
+        <h3>Envía la reserva</h3>
+        <p>Rellenas tus datos y se abre WhatsApp con el pedido ya escrito. Solo tienes que darle a enviar.</p>
+      </article>
+      <article class="how-step reveal" style="--d:.2s">
+        <span class="n">3</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <h3>Te lo confirmamos</h3>
+        <p>Te contestamos para confirmar el día, la hora y el importe exacto tras pesar la fruta. Pagas al recoger o al recibir.</p>
+      </article>
+    </div>
+    <div class="delivery-grid">
+      <div class="delivery reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l1.5-5h15L21 9"/><path d="M4 9v11h16V9"/><path d="M9 20v-6h6v6"/><path d="M3 9h18"/></svg>
+        <div>
+          <h3>Recogida en tienda</h3>
+          <p>Te lo dejamos preparado en C. Jaime I el Conquistador, 42. Pasas, pagas y te lo llevas.</p>
+        </div>
+      </div>
+      <div class="delivery alt reveal" style="--d:.1s">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 6h13v10H1z"/><path d="M14 9h4l3 3v4h-7"/><circle cx="5.5" cy="18" r="2"/><circle cx="17.5" cy="18" r="2"/></svg>
+        <div>
+          <h3>Reparto a domicilio</h3>
+          <p>Te lo llevamos a casa en <span class="js-zone">Ibi</span> en la franja que elijas.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== OPINIONES ===================== -->
+<section class="section reviews" id="opiniones">
+  <div class="container">
+    <div class="rev-head reveal">
+      <div>
+        <span class="eyebrow">Opiniones</span>
+        <h2 class="section-title">Lo que dicen <em>nuestros clientes</em></h2>
+      </div>
+      <div class="rev-score" id="revScore" hidden></div>
+    </div>
+    <div id="reviewsBody"></div>
+  </div>
+</section>
+
+<!-- ===================== PREGUNTAS FRECUENTES ===================== -->
+<section class="section faq" id="preguntas">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">Preguntas frecuentes</span>
+      <h2 class="section-title">Lo que más nos <em>preguntáis</em></h2>
+    </div>
+    <div class="faq-list">
+      <details class="reveal">
+        <summary>¿Cuándo puedo recoger mi pedido?</summary>
+        <div class="answer">
+          <p>En nuestro horario de tienda: de lunes a viernes de 8:00 a 14:00 y de 17:00 a 20:00, y los sábados de 9:00 a 14:00. Los domingos cerramos.</p>
+          <p>Al hacer la reserva eliges el día y la franja que mejor te venga, y te lo tenemos listo para entonces.</p>
+        </div>
+      </details>
+      <details class="reveal">
+        <summary>¿Hasta dónde hacéis reparto a domicilio?</summary>
+        <div class="answer">
+          <p>Repartimos en <span class="js-zone">Ibi</span>. Si vives fuera, escríbenos por WhatsApp antes de reservar y te decimos si podemos llegar.</p>
+          <p class="js-min-faq">No hay pedido mínimo: te llevamos desde un kilo de mandarinas.</p>
+        </div>
+      </details>
+      <details class="reveal">
+        <summary>¿Cómo se paga?</summary>
+        <div class="answer">
+          <p>No se paga nada por la web. Pagas en efectivo, con tarjeta o con Bizum cuando recoges tu pedido en la tienda o cuando te lo entregamos en casa.</p>
+        </div>
+      </details>
+      <details class="reveal">
+        <summary>¿Por qué el precio es orientativo?</summary>
+        <div class="answer">
+          <p>La fruta se vende al peso y cada pieza es distinta. Calculamos el total con el precio por kilo y, al preparar tu pedido, lo pesamos y te confirmamos el importe exacto antes de entregarlo. Normalmente la diferencia es de céntimos.</p>
+        </div>
+      </details>
+      <details class="reveal">
+        <summary>¿La reserva queda hecha al enviar el WhatsApp?</summary>
+        <div class="answer">
+          <p>La reserva se confirma cuando te contestamos. Lo hacemos lo antes posible dentro del horario de tienda; si nos escribes por la noche o en domingo, te respondemos a primera hora del siguiente día que abrimos.</p>
+        </div>
+      </details>
+      <details class="reveal">
+        <summary>¿Puedo cambiar o anular mi pedido?</summary>
+        <div class="answer">
+          <p>Claro. Contesta al mismo chat de WhatsApp diciendo qué quieres cambiar, mejor con unas horas de margen antes de la franja que elegiste.</p>
+        </div>
+      </details>
+      <details class="reveal">
+        <summary>Busco algo que no está en la lista</summary>
+        <div class="answer">
+          <p>En la tienda tenemos mucho más: verdura, frutos secos, conservas, productos gourmet y cestas para regalar. Pídelo en las observaciones de la reserva o pregúntanos por WhatsApp.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== VISÍTANOS ===================== -->
+<section class="section visit" id="visitanos">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">Visítanos</span>
+      <h2 class="section-title">Te esperamos en <em>Ibi</em></h2>
+    </div>
+    <div class="visit-grid">
+      <div class="map-card reveal">
+        <div class="map-consent" id="mapBox">
+          <p>Para mostrarte el mapa se carga Google Maps, que puede guardar cookies en tu navegador.</p>
+          <button class="btn btn-green" type="button" id="mapLoad">Ver el mapa</button>
+        </div>
+        <div class="map-info">
+          <p>C. Jaime I el Conquistador, 42 · 03440 Ibi</p>
+          <a class="btn btn-green" target="_blank" rel="noopener"
+             href="https://www.google.com/maps/dir/?api=1&destination=C.%20Jaime%20I%20el%20Conquistador%2042%2C%2003440%20Ibi%2C%20Alicante">Cómo llegar</a>
+        </div>
+      </div>
+      <div class="hours-card reveal" style="--d:.1s">
+        <div class="status" id="status"><span class="d"></span><span id="statusText">Horario</span></div>
+        <ul class="days" id="days"></ul>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="wordmark"><span>Frutería Jiménez<span class="dot">.</span></span><small>Fruta de temporada</small></a>
+        <p class="tag-line">Fruta y verdura fresca, de temporada y de proximidad. Con el trato de toda la vida.</p>
+        <div class="socials" id="socials"></div>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+            <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=C.%20Jaime%20I%20el%20Conquistador%2042%2C%2003440%20Ibi%2C%20Alicante">C. Jaime I el Conquistador, 42<br>03440 Ibi, Alicante</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a class="js-tel js-phone-text" href="#">[número]</a></li>
+          <li><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2z"/></svg>
+            <a class="js-wa" href="#" target="_blank" rel="noopener">WhatsApp</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Horario</h4>
+        <ul>
+          <li>Lun – Vie: 8:00–14:00 · 17:00–20:00</li>
+          <li>Sábado: 9:00–14:00</li>
+          <li>Domingo: cerrado</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Frutería Jiménez · Ibi (Alicante). Todos los derechos reservados.</span>
+      <span class="legal-links">
+        <a href="legal.html#aviso-legal">Aviso legal</a>
+        <a href="legal.html#privacidad">Privacidad</a>
+        <a href="legal.html#cookies">Cookies</a>
+        <a href="index.html">Web principal</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== FLOTANTES ===================== -->
+<a class="fab js-wa" data-msg="Hola, tengo una duda sobre la tienda online" href="#" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp si tienes dudas">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.8 14.13c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.27.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.61.47.24.56.79 1.92.86 2.06.07.14.11.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.56.16.27.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.27.14.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.23.61-.14.25.09 1.58.75 1.85.88.27.14.45.2.52.32.07.11.07.66-.17 1.33z"/></svg>
+  ¿Dudas?
+</a>
+
+<button class="cart-bar" id="cartBar" type="button" aria-label="Ver la cesta">
+  <span class="l"><small class="js-cart-items">0 productos</small><strong class="js-cart-total">0,00 €</strong></span>
+  <span class="r">Ver cesta
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+  </span>
+</button>
+
+<!-- ===================== PANEL DE LA CESTA ===================== -->
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" aria-hidden="true">
+  <div class="drawer-handle" aria-hidden="true"></div>
+  <div class="drawer-head">
+    <button class="icon-btn" type="button" id="backBtn" aria-label="Volver a la cesta" hidden>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    </button>
+    <h2 id="drawerTitle"><span id="drawerTitleText">Tu cesta</span> <span class="count js-cart-items-short">0</span></h2>
+    <button class="icon-btn" type="button" id="closeBtn" aria-label="Cerrar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+
+  <!-- Vista 1: cesta -->
+  <div class="view active" id="viewCart">
+    <div class="view-scroll">
+      <ul class="lines" id="lines"></ul>
+      <div class="cart-empty" id="cartEmpty">
+        <div class="big" aria-hidden="true">🧺</div>
+        <h3>Tu cesta está vacía</h3>
+        <p>Añade la fruta de temporada que te apetezca y te la preparamos.</p>
+        <button class="btn btn-primary" type="button" id="emptyCta">Ver la fruta del mes</button>
+      </div>
+    </div>
+    <div class="view-foot" id="cartFoot">
+      <div class="totals"><span>Total estimado</span><strong class="js-cart-total">0,00 €</strong></div>
+      <div class="minimum" id="minimum"><span id="minimumText"></span><div class="meter"><i id="meter"></i></div></div>
+      <button class="btn btn-primary btn-block" type="button" id="toForm">Continuar con la reserva
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </button>
+      <p class="foot-note">Los precios son orientativos; el importe final se confirma al pesar la fruta.</p>
+    </div>
+  </div>
+
+  <!-- Vista 2: formulario de reserva -->
+  <div class="view" id="viewForm">
+    <form class="view-scroll form" id="form" novalidate>
+      <div class="field" data-f="nombre">
+        <label for="fNombre">Nombre y apellidos</label>
+        <input id="fNombre" name="nombre" type="text" autocomplete="name" required>
+        <span class="err">Escribe tu nombre y apellidos.</span>
+      </div>
+      <div class="field" data-f="telefono">
+        <label for="fTel">Teléfono</label>
+        <input id="fTel" name="telefono" type="tel" inputmode="tel" autocomplete="tel" placeholder="612 345 678" required>
+        <span class="err">Escribe un teléfono válido (9 cifras).</span>
+      </div>
+
+      <div class="field" data-f="entrega">
+        <span class="legend" id="entregaLegend">Tipo de entrega</span>
+        <div class="choice" role="radiogroup" aria-labelledby="entregaLegend">
+          <input type="radio" name="entrega" id="eRecogida" value="recogida" checked>
+          <label for="eRecogida">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l1.5-5h15L21 9"/><path d="M4 9v11h16V9"/><path d="M9 20v-6h6v6"/></svg>
+            Recogida en tienda
+            <small>C. Jaime I, 42</small>
+          </label>
+          <input type="radio" name="entrega" id="eReparto" value="reparto">
+          <label for="eReparto">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 6h13v10H1z"/><path d="M14 9h4l3 3v4h-7"/><circle cx="5.5" cy="18" r="2"/><circle cx="17.5" cy="18" r="2"/></svg>
+            Reparto a domicilio
+            <small class="js-zone">Ibi</small>
+          </label>
+        </div>
+      </div>
+
+      <div class="collapse" id="addrWrap">
+        <div>
+          <div class="field" data-f="direccion">
+            <label for="fDir">Dirección de entrega</label>
+            <input id="fDir" name="direccion" type="text" autocomplete="street-address" placeholder="Calle, número, piso y puerta">
+            <span class="err">Necesitamos la dirección para el reparto.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="row2">
+        <div class="field" data-f="fecha">
+          <label for="fFecha">Fecha</label>
+          <input id="fFecha" name="fecha" type="date" required>
+          <span class="err" id="fechaErr">Elige un día que abramos (de lunes a sábado).</span>
+        </div>
+        <div class="field" data-f="franja">
+          <label for="fFranja">Franja horaria</label>
+          <select id="fFranja" name="franja" required></select>
+          <span class="err">Elige una franja horaria.</span>
+        </div>
+      </div>
+
+      <div class="field" data-f="obs">
+        <label for="fObs">Observaciones <span class="opt">(opcional)</span></label>
+        <textarea id="fObs" name="observaciones" placeholder="Ej.: plátanos poco maduros, aguacates para el fin de semana…"></textarea>
+      </div>
+
+      <div class="summary" id="summary"></div>
+
+      <div class="consent" data-f="privacidad">
+        <label class="check">
+          <input type="checkbox" id="fPriv" name="privacidad">
+          <span>He leído y acepto la <a href="legal.html#privacidad" target="_blank" rel="noopener">política de privacidad</a>. Usaremos tus datos solo para gestionar esta reserva.</span>
+        </label>
+        <span class="err">Para enviar la reserva tienes que aceptar la política de privacidad.</span>
+      </div>
+    </form>
+    <div class="view-foot">
+      <button class="btn btn-wa btn-block" type="submit" form="form" id="sendBtn">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2z"/></svg>
+        Reservar por WhatsApp
+      </button>
+      <p class="foot-note">No pagas nada ahora. Te confirmamos la reserva y el importe final por WhatsApp.</p>
+    </div>
+  </div>
+
+  <!-- Vista 3: confirmación -->
+  <div class="view" id="viewDone">
+    <div class="view-scroll">
+      <div class="done">
+        <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <h3>¡Reserva preparada!</h3>
+        <p>Envía el mensaje en WhatsApp para confirmarla. Te contestaremos con la confirmación y el importe final.</p>
+        <span class="ref" id="doneRef"></span>
+        <a class="btn btn-wa" id="reopenWa" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2z"/></svg>
+          Abrir WhatsApp de nuevo
+        </a>
+      </div>
+    </div>
+    <div class="view-foot">
+      <button class="btn btn-green btn-block" type="button" id="clearBtn">Vaciar la cesta</button>
+      <button class="btn btn-line btn-block" type="button" id="keepBtn">Seguir mirando</button>
+    </div>
+  </div>
+</aside>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<!-- Datos editables: catálogo, precios, teléfono y pedido mínimo -->
+<script src="productos.js"></script>
+
+<script>
+(async function(){
+  "use strict";
+
+  if (typeof TIENDA === "undefined" || typeof CATALOGO === "undefined") {
+    document.getElementById("grid").innerHTML =
+      '<div class="empty"><strong>No se ha podido cargar el catálogo</strong>Comprueba que el archivo productos.js está en la misma carpeta que tienda.html.</div>';
+    return;
+  }
+
+  /* =========================================================
+     UTILIDADES
+     ========================================================= */
+  const $ = (s, el = document) => el.querySelector(s);
+  const $$ = (s, el = document) => Array.from(el.querySelectorAll(s));
+  const MESES = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
+  const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
+  const round2 = n => Math.round(n * 100) / 100;
+  const eur = n => n.toLocaleString("es-ES", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  const num = n => n.toLocaleString("es-ES", { maximumFractionDigits: 2 });
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" }[c]));
+  const store = {
+    get(k, d){ try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch (e) { return d; } },
+    set(k, v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+  };
+
+  const PLURAL = { kg: "kg", unidad: "unidades", bandeja: "bandejas", manojo: "manojos", cesta: "cestas", pack: "packs" };
+  const pasoDe = p => p.paso || (p.unidad === "kg" ? 0.5 : 1);
+  const fmtQty = (q, unidad) => num(q) + " " + (q === 1 || unidad === "kg" ? unidad : (PLURAL[unidad] || unidad));
+  const porUnidad = u => "/ " + (u === "kg" ? "kg" : u);
+  // Texto de una línea de pedido: "2 kg de Caqui" o "1 × Cesta regalo"
+  const lineaTxt = (p, q) => p.tipo === "pack" ? num(q) + " × " + p.nombre : fmtQty(q, p.unidad) + " de " + p.nombre;
+
+  /* ---------- Fecha y hora de Ibi (Europe/Madrid) ---------- */
+  function nowInMadrid(){
+    try {
+      const parts = new Intl.DateTimeFormat("en-GB", {
+        timeZone: "Europe/Madrid", weekday: "short", year: "numeric", month: "2-digit", day: "2-digit",
+        hour: "2-digit", minute: "2-digit", hour12: false
+      }).formatToParts(new Date());
+      const get = t => parts.find(p => p.type === t).value;
+      return {
+        day: { Sun:0, Mon:1, Tue:2, Wed:3, Thu:4, Fri:5, Sat:6 }[get("weekday")],
+        minutes: (parseInt(get("hour"), 10) % 24) * 60 + parseInt(get("minute"), 10),
+        month: parseInt(get("month"), 10),
+        iso: get("year") + "-" + get("month") + "-" + get("day")
+      };
+    } catch (e) {
+      const d = new Date();
+      return { day: d.getDay(), minutes: d.getHours() * 60 + d.getMinutes(), month: d.getMonth() + 1, iso: toISO(d) };
+    }
+  }
+  const pad = n => String(n).padStart(2, "0");
+  const toISO = d => d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate());
+  const fromISO = s => { const [y, m, d] = s.split("-").map(Number); return new Date(y, m - 1, d); };
+  const addDays = (iso, n) => { const d = fromISO(iso); d.setDate(d.getDate() + n); return toISO(d); };
+
+  const NOW = nowInMadrid();
+
+  // Permite previsualizar otro mes con ?mes=5
+  const qMes = parseInt(new URLSearchParams(location.search).get("mes"), 10);
+  const MES = qMes >= 1 && qMes <= 12 ? qMes : NOW.month;
+  const MES_SIG = MES % 12 + 1;
+
+  /* ---------- Teléfono / WhatsApp ---------- */
+  const digits = String(TIENDA.telefono || "").replace(/\D/g, "");
+  const telOK = digits.length >= 9;
+  const waNumber = telOK ? (digits.length === 9 ? (TIENDA.prefijoPais || "34") + digits : digits) : "";
+  if (!telOK) console.warn("[Frutería Jiménez] Falta configurar el teléfono de WhatsApp en productos.js (TIENDA.telefono).");
+  const waLink = msg => "https://wa.me/" + waNumber + "?text=" + encodeURIComponent(msg);
+
+  $$(".js-wa").forEach(a => { a.href = waLink(a.dataset.msg || "Hola, quería hacer un pedido"); });
+  $$(".js-tel").forEach(a => { a.href = telOK ? "tel:+" + waNumber : "#"; });
+  $$(".js-phone-text").forEach(el => {
+    el.textContent = digits.length === 9 ? digits.replace(/(\d{3})(\d{3})(\d{3})/, "$1 $2 $3") : (TIENDA.telefono || "");
+  });
+  $$(".js-zone").forEach(el => { el.textContent = TIENDA.zonaReparto || "Ibi"; });
+  $("#year").textContent = new Date().getFullYear();
+
+  /* ---------- Redes sociales ---------- */
+  const ICONS = {
+    instagram: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>',
+    facebook: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8z"/></svg>',
+    whatsapp: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2z"/></svg>'
+  };
+  const socials = $("#socials");
+  [["instagram", TIENDA.instagram, "Instagram"], ["facebook", TIENDA.facebook, "Facebook"], ["whatsapp", waLink("Hola"), "WhatsApp"]]
+    .forEach(([k, url, label]) => {
+      if (!url) return;
+      socials.insertAdjacentHTML("beforeend", '<a href="' + esc(url) + '" target="_blank" rel="noopener" aria-label="' + label + '">' + ICONS[k] + "</a>");
+    });
+
+  /* =========================================================
+     CARGA DEL CATÁLOGO: hoja de Google (opcional) o productos.js
+     ========================================================= */
+  const HOJA_KEY = "fj-hoja-v1";
+  let FUENTE = "productos.js (no hay enlace en hojaCSV)";
+
+  function parseCSV(t){
+    const rows = []; let row = [], cur = "", q = false;
+    for (let i = 0; i < t.length; i++) {
+      const c = t[i];
+      if (q) {
+        if (c === '"') { if (t[i + 1] === '"') { cur += '"'; i++; } else q = false; } else cur += c;
+      } else if (c === '"') q = true;
+      else if (c === ",") { row.push(cur); cur = ""; }
+      else if (c === "\n") { row.push(cur); rows.push(row); row = []; cur = ""; }
+      else if (c !== "\r") cur += c;
+    }
+    if (cur !== "" || row.length) { row.push(cur); rows.push(row); }
+    return rows;
+  }
+
+  // "todo", "10,11,12", "10-12" o "11-2" (con salto de año)
+  function parseMeses(v){
+    v = String(v || "").trim().toLowerCase();
+    if (!v || /^todo/.test(v)) return [1,2,3,4,5,6,7,8,9,10,11,12];
+    const set = new Set();
+    v.split(/[,;\s]+/).forEach(tok => {
+      const m = tok.match(/^(\d{1,2})-(\d{1,2})$/);
+      if (m) {
+        let a = +m[1]; const b = +m[2];
+        if (a < 1 || a > 12 || b < 1 || b > 12) return;
+        for (let i = 0; i < 12; i++) { set.add(a); if (a === b) break; a = a % 12 + 1; }
+      } else if (/^\d{1,2}$/.test(tok) && +tok >= 1 && +tok <= 12) set.add(+tok);
+    });
+    return Array.from(set);
+  }
+
+  function filaAItem(h, r){
+    const o = {};
+    h.forEach((k, i) => { o[k] = (r[i] || "").trim(); });
+    if (!o.nombre) return null;
+    const precio = parseFloat(String(o.precio).replace(",", ".").replace(/[^\d.]/g, ""));
+    if (!(precio >= 0)) return null;
+    const item = {
+      id: o.id || o.nombre.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""),
+      tipo: /pack|cesta/i.test(o.tipo) ? "pack" : "fruta",
+      nombre: o.nombre, imagen: o.imagen, emoji: o.emoji || "🧺", color: o.color || "#EEE",
+      precio: precio, unidad: (o.unidad || "kg").toLowerCase(), origen: o.origen, descripcion: o.descripcion,
+      contenido: o.contenido, meses: parseMeses(o.meses),
+      activo: !/^(no|n|false|0|agotado)$/i.test(o.activo),
+      aviso: /ultimo/i.test(o.aviso) ? "ultimo-dia" : /poca/i.test(o.aviso) ? "pocas" : ""
+    };
+    const stock = parseFloat(String(o.stock).replace(",", "."));
+    if (o.stock !== "" && !isNaN(stock)) item.stock = stock;
+    const paso = parseFloat(String(o.paso).replace(",", "."));
+    if (paso > 0) item.paso = paso;
+    return item;
+  }
+
+  // Lee la hoja con una etiqueta <script> (no está sujeta a CORS: funciona también abriendo el archivo desde el disco)
+  function hojaJSONP(id, gid){
+    return new Promise((resolve, reject) => {
+      const cb = "fjHoja" + Date.now();
+      const sc = document.createElement("script");
+      const fin = () => { clearTimeout(t); delete window[cb]; sc.remove(); };
+      const t = setTimeout(() => { fin(); reject(new Error("tiempo agotado leyendo la hoja")); }, 8000);
+      window[cb] = data => {
+        fin();
+        if (!data || data.status !== "ok" || !data.table) return reject(new Error("la hoja no es pública o no existe"));
+        const cols = data.table.cols;
+        const rows = data.table.rows.map(r => cols.map((_, i) => { const c = r.c[i]; return c ? (c.f != null ? c.f : (c.v != null ? c.v : "")) : ""; }));
+        resolve([cols.map(c => c.label || c.id)].concat(rows));
+      };
+      sc.onerror = () => { fin(); reject(new Error("no se pudo cargar la hoja (¿está compartida con 'cualquiera con el enlace'?)")); };
+      sc.src = "https://docs.google.com/spreadsheets/d/" + encodeURIComponent(id) + "/gviz/tq?tqx=responseHandler:" + cb + "&headers=1&" + (gid ? "gid=" + encodeURIComponent(gid) : "sheet=Catalogo");
+      document.head.appendChild(sc);
+    });
+  }
+
+  async function cargarCatalogo(){
+    const local = { fruta: CATALOGO, packs: typeof PACKS !== "undefined" ? PACKS : [] };
+    let url = String(TIENDA.hojaCSV || "").trim().replace(/&amp;/g, "&");
+    const hojaId = String(TIENDA.hojaId || "").trim();
+    if (!url && !hojaId) return local;
+    // Acepta también el enlace normal de la hoja (/edit) o el de "pubhtml" y lo convierte a CSV
+    const mId = url.match(/spreadsheets\/d\/([\w-]+)/);
+    if (/\/pubhtml/.test(url)) {
+      const q = (url.split("?")[1] || "").replace(/(^|&)output=[^&]*/g, "");
+      url = url.replace(/\/pubhtml.*$/, "/pub?" + (q ? q + "&" : "") + "output=csv");
+    } else if (url && mId && !/\/d\/e\//.test(url) && !/output=csv|tqx=out:csv/.test(url)) {
+      const g = url.match(/[#&?]gid=(\d+)/);
+      url = "https://docs.google.com/spreadsheets/d/" + mId[1] + "/gviz/tq?tqx=out:csv" + (g ? "&gid=" + g[1] : "&sheet=Catalogo");
+    }
+    const clave = url || hojaId;
+    const leer = rows => {
+      rows = rows.filter(r => r.some(c => String(c).trim()));
+      if (rows.length < 2) throw new Error("hoja vacía");
+      const h = rows[0].map(c => String(c).trim().toLowerCase());
+      if (!h.includes("nombre") || !h.includes("precio")) throw new Error("faltan las columnas nombre y precio");
+      const items = rows.slice(1).map(r => filaAItem(h, r.map(c => String(c)))).filter(Boolean);
+      if (!items.length) throw new Error("sin productos válidos");
+      return items;
+    };
+    let items = null, rows = null, fallo = null;
+    if (url) {
+      try {
+        const ctl = new AbortController();
+        const t = setTimeout(() => ctl.abort(), 6000);
+        const res = await fetch(url, { signal: ctl.signal, cache: "no-cache" });
+        clearTimeout(t);
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        rows = parseCSV(await res.text());
+        items = leer(rows);
+        FUENTE = "hoja de Google por enlace CSV (datos actuales, " + items.length + " filas)";
+      } catch (e) { fallo = e; items = null; }
+    }
+    if (!items && hojaId) {
+      try {
+        rows = await hojaJSONP(hojaId, TIENDA.hojaGid);
+        items = leer(rows);
+        FUENTE = "hoja de Google por hojaId (datos actuales, " + items.length + " filas)";
+      } catch (e) { fallo = e; items = null; }
+    }
+    if (items) store.set(HOJA_KEY, { url: clave, rows: rows });
+    else {
+      console.warn("[Frutería Jiménez] No se pudo leer la hoja de Google; se usa la última copia guardada o productos.js.", fallo);
+      const msg = fallo && fallo.message ? fallo.message : String(fallo);
+      FUENTE = "productos.js (la hoja falló: " + msg + ")";
+      const c = store.get(HOJA_KEY, null);
+      if (c && c.url === clave && c.rows) { try { items = leer(c.rows); FUENTE = "copia guardada de la hoja (la hoja falló: " + msg + ")"; } catch (e2) {} }
+    }
+    if (!items) return local;
+    return { fruta: items.filter(i => i.tipo !== "pack"), packs: items.filter(i => i.tipo === "pack") };
+  }
+
+  if (String(TIENDA.hojaCSV || "").trim() || String(TIENDA.hojaId || "").trim()) {
+    $("#grid").innerHTML = '<div class="empty"><strong>Cargando la fruta del mes…</strong></div>';
+  }
+  const DATOS = await cargarCatalogo();
+  const ITEMS = DATOS.fruta.concat(DATOS.packs);
+  // Diagnóstico: abre tienda.html?debug=1 para ver de dónde salen los datos
+  if (new URLSearchParams(location.search).has("debug")) {
+    const d = document.createElement("div");
+    d.style.cssText = "position:fixed;left:0;right:0;bottom:0;z-index:999;background:#1F4029;color:#fff;padding:10px 14px;font:13px/1.4 monospace";
+    d.textContent = "Catálogo cargado desde: " + FUENTE;
+    document.body.appendChild(d);
+  }
+  ITEMS.forEach(p => { p.tipo = p.tipo || "fruta"; });
+
+  /* =========================================================
+     STOCK Y AVISOS (último día / quedan pocas)
+     ========================================================= */
+  const LOW = Number(TIENDA.umbralPocas) || 5;
+  const agotado = p => p.activo === false || (typeof p.stock === "number" && p.stock <= 0);
+  const maxQty = p => typeof p.stock === "number" ? p.stock : Infinity;
+  const DIA_MES = parseInt(NOW.iso.slice(8), 10);
+
+  function alertaDe(p){
+    if (agotado(p)) return null;
+    if (p.aviso === "ultimo-dia") return { txt: "⏳ Último día", cls: "" };
+    if (typeof p.stock === "number" && p.stock <= LOW) return { txt: "Quedan solo " + fmtQty(p.stock, p.unidad), cls: "" };
+    if (p.aviso === "pocas") return { txt: "Quedan pocas", cls: "" };
+    // Último mes de su temporada y ya estamos a final de mes
+    if (p.tipo !== "pack" && p.meses.length < 12 && !p.meses.includes(MES_SIG) && (qMes || DIA_MES >= 22)) {
+      return { txt: "Fin de temporada", cls: "soft" };
+    }
+    return null;
+  }
+
+  /* =========================================================
+     CATÁLOGO DEL MES
+     ========================================================= */
+  const DEL_MES = ITEMS.filter(p => Array.isArray(p.meses) && p.meses.includes(MES));
+  // Primero la fruta disponible, luego la agotada y al final las cestas y packs
+  const rango = p => (p.tipo === "pack" ? 2 : 0) + (agotado(p) ? 1 : 0);
+  DEL_MES.sort((a, b) => rango(a) - rango(b));
+  const BY_ID = Object.fromEntries(ITEMS.map(p => [p.id, p]));
+  const comprable = id => { const p = BY_ID[id]; return !!p && !agotado(p) && p.meses.includes(MES); };
+
+  const mesNombre = cap(MESES[MES - 1]);
+  $("#monthName").textContent = mesNombre;
+  const disponibles = DEL_MES.filter(p => p.tipo !== "pack" && !agotado(p)).length;
+  $("#heroBadge").textContent = mesNombre + " · " + disponibles + " frutas de temporada";
+  $("#heroCta").textContent = "Ver la fruta de " + MESES[MES - 1];
+  $("#monthLead").textContent = "Solo lo que está en su mejor momento en " + MESES[MES - 1] +
+    ". El catálogo cambia solo cada mes, así que siempre verás lo que de verdad tenemos.";
+  document.title = "Fruta de temporada · " + mesNombre + " | Tienda online Frutería Jiménez";
+
+  // Lo que llega el mes que viene
+  const llegan = ITEMS.filter(p => p.tipo !== "pack" && p.meses.includes(MES_SIG) && !p.meses.includes(MES));
+  if (llegan.length) {
+    $("#coming").hidden = false;
+    $("#nextMonth").textContent = MESES[MES_SIG - 1];
+    $("#comingList").innerHTML = llegan.map(p => "<li>" + esc(p.emoji || "") + " " + esc(p.nombre) + "</li>").join("");
+  }
+
+  const LOCAL = /alicante|valencia|castell[oó]n|alcoi|vinalop|xúquer|xuquer|ribera|plana|vega baja|ibi|zona/i;
+  const esLocal = p => LOCAL.test(p.origen || "");
+
+  const pick = {}; // cantidad elegida en cada tarjeta antes de añadir
+
+  function mediaHTML(p, big){
+    const fb = '<div class="fallback"><span class="em" aria-hidden="true">' + esc(p.emoji || "🧺") + "</span>" +
+      (big ? '<span class="nm">' + esc(p.nombre) + "</span>" : "") + "</div>";
+    const img = p.imagen ? '<img src="' + esc(p.imagen) + '" alt="' + esc(p.nombre) + '" loading="lazy" onerror="this.remove()">' : "";
+    return fb + img;
+  }
+
+  function cardHTML(p){
+    const out = agotado(p);
+    const paso = pasoDe(p);
+    const q = pick[p.id] || paso;
+    const al = alertaDe(p);
+    return '<article class="product reveal' + (out ? " out" : "") + (p.tipo === "pack" ? " is-pack" : "") + (cart[p.id] ? " has" : "") + '" data-id="' + esc(p.id) + '">' +
+      '<div class="media" style="--tint:' + esc(p.color || "#EEE") + '">' + mediaHTML(p, true) +
+        (out ? '<span class="tag out">Agotado</span>' : p.tipo === "pack" ? '<span class="tag pack">Pack</span>' : esLocal(p) ? '<span class="tag local">De aquí</span>' : "") +
+        (al ? '<span class="alert ' + al.cls + '">' + esc(al.txt) + "</span>" : "") +
+        '<span class="in-cart" title="En tu cesta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>' +
+      "</div>" +
+      '<div class="p-body">' +
+        '<span class="p-origin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/></svg>' + esc(p.origen || "") + "</span>" +
+        '<h3 class="p-name">' + esc(p.nombre) + "</h3>" +
+        '<p class="p-desc">' + esc(p.descripcion || "") + (p.contenido ? '<span class="p-contents"><b>Incluye:</b> ' + esc(p.contenido) + "</span>" : "") + "</p>" +
+        '<div class="p-price"><strong>' + eur(p.precio) + ' €</strong><span>' + porUnidad(p.unidad) + "</span></div>" +
+        '<div class="p-actions">' +
+          (out
+            ? '<button class="btn btn-line add-btn" type="button" disabled>Agotado</button>'
+            : '<div class="stepper" role="group" aria-label="Cantidad de ' + esc(p.nombre) + '">' +
+                '<button type="button" data-act="minus" aria-label="Menos"' + (q <= paso ? " disabled" : "") + '>−</button>' +
+                "<output>" + fmtQty(q, p.unidad) + "</output>" +
+                '<button type="button" data-act="plus" aria-label="Más"' + (round2(q + paso) > maxQty(p) ? " disabled" : "") + '>+</button>' +
+              "</div>" +
+              '<button class="btn btn-primary add-btn" type="button" data-act="add">Añadir a la cesta</button>') +
+        "</div>" +
+      "</div>" +
+    "</article>";
+  }
+
+  let filtro = "todo";
+  let busqueda = "";
+  const norm = s => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+
+  function renderGrid(){
+    const q = norm(busqueda.trim());
+    const list = DEL_MES.filter(p => {
+      if (filtro === "cerca" && !esLocal(p)) return false;
+      if (filtro === "pack" && p.tipo !== "pack") return false;
+      if (filtro === "kg" && (p.unidad !== "kg" || p.tipo === "pack")) return false;
+      if (filtro === "pieza" && (p.unidad === "kg" || p.tipo === "pack")) return false;
+      if (q && !norm(p.nombre + " " + (p.origen || "") + " " + (p.descripcion || "")).includes(q)) return false;
+      return true;
+    });
+    const grid = $("#grid");
+    if (!DEL_MES.length) {
+      grid.innerHTML = '<div class="empty"><strong>Estamos renovando el género</strong>Este mes aún no hemos subido la fruta de temporada. Escríbenos por WhatsApp y te contamos qué tenemos.</div>';
+      return;
+    }
+    grid.innerHTML = list.length ? list.map(cardHTML).join("")
+      : '<div class="empty"><strong>No encontramos esa fruta</strong>Puede que no esté de temporada en ' + MESES[MES - 1] + '. Pregúntanos por WhatsApp: si la tenemos, te la apartamos.</div>';
+    observe($$(".reveal", grid));
+  }
+
+  $("#grid").addEventListener("click", e => {
+    const btn = e.target.closest("button[data-act]");
+    if (!btn) return;
+    const card = btn.closest(".product");
+    const p = BY_ID[card.dataset.id];
+    const paso = pasoDe(p);
+    let q = pick[p.id] || paso;
+    if (btn.dataset.act === "plus" && round2(q + paso) <= maxQty(p)) q = round2(q + paso);
+    if (btn.dataset.act === "minus") q = Math.max(paso, round2(q - paso));
+    if (btn.dataset.act === "add") {
+      if (addToCart(p.id, q)) {
+        btn.classList.add("added");
+        btn.textContent = "✓ Añadido";
+        setTimeout(() => { btn.classList.remove("added"); btn.textContent = "Añadir a la cesta"; }, 1400);
+        card.classList.add("has");
+      }
+      pick[p.id] = paso;
+      q = paso;
+    } else {
+      pick[p.id] = q;
+    }
+    $("output", card).textContent = fmtQty(q, p.unidad);
+    $('[data-act="minus"]', card).disabled = q <= paso;
+    $('[data-act="plus"]', card).disabled = round2(q + paso) > maxQty(p);
+  });
+
+  $("#search").addEventListener("input", e => { busqueda = e.target.value; renderGrid(); });
+  $$(".chip").forEach(ch => ch.addEventListener("click", () => {
+    filtro = ch.dataset.filter;
+    $$(".chip").forEach(c => c.setAttribute("aria-pressed", c === ch ? "true" : "false"));
+    renderGrid();
+  }));
+
+  /* =========================================================
+     CESTA (guardada en localStorage)
+     ========================================================= */
+  const CART_KEY = "fj-cesta-v1";
+  let cart = store.get(CART_KEY, {});
+  if (!cart || typeof cart !== "object") cart = {};
+
+  // Quita de la cesta lo que ya no está de temporada o se ha agotado
+  const quitados = Object.keys(cart).filter(id => !comprable(id) || !(cart[id] > 0));
+  quitados.forEach(id => delete cart[id]);
+  Object.keys(cart).forEach(id => { const mx = maxQty(BY_ID[id]); if (cart[id] > mx) cart[id] = mx; });
+  if (!qMes) store.set(CART_KEY, cart); // en modo vista previa (?mes=) no se toca la cesta guardada
+
+  const cartIds = () => Object.keys(cart).filter(id => BY_ID[id]);
+  const lineTotal = id => round2(BY_ID[id].precio * cart[id]);
+  const cartTotal = () => round2(cartIds().reduce((s, id) => s + lineTotal(id), 0));
+  const MIN = Number(TIENDA.pedidoMinimo) || 0;
+
+  function addToCart(id, q){
+    const p = BY_ID[id];
+    const room = round2(maxQty(p) - (cart[id] || 0));
+    if (room <= 0) { toast("Ya tienes en la cesta todo lo que nos queda de " + p.nombre); return false; }
+    q = Math.min(q, room);
+    cart[id] = round2((cart[id] || 0) + q);
+    saveCart();
+    toast("🧺 Añadido: " + p.nombre + " (" + fmtQty(q, p.unidad) + ")");
+    const b = $("#cartBtn");
+    b.classList.remove("bump"); void b.offsetWidth; b.classList.add("bump");
+    return true;
+  }
+  function setQty(id, q){
+    if (q <= 0) delete cart[id]; else cart[id] = round2(q);
+    saveCart();
+  }
+  function saveCart(){
+    store.set(CART_KEY, cart);
+    renderCart();
+  }
+
+  function renderCart(){
+    const ids = cartIds();
+    const n = ids.length;
+    const total = cartTotal();
+    $$(".js-cart-total").forEach(el => el.textContent = eur(total) + " €");
+    $$(".js-cart-items").forEach(el => el.textContent = n + (n === 1 ? " producto" : " productos"));
+    $$(".js-cart-items-short").forEach(el => el.textContent = n);
+    const badge = $(".js-cart-count");
+    badge.textContent = n;
+    badge.classList.toggle("show", n > 0);
+    $("#cartBtn").setAttribute("aria-label", "Abrir la cesta (" + n + (n === 1 ? " producto" : " productos") + ", " + eur(total) + " €)");
+    document.body.classList.toggle("has-bar", n > 0 && !document.body.classList.contains("cart-open"));
+
+    // Marcas "en la cesta" en las tarjetas
+    $$(".product").forEach(c => c.classList.toggle("has", !!cart[c.dataset.id]));
+
+    // Líneas
+    $("#lines").innerHTML = ids.map(id => {
+      const p = BY_ID[id];
+      const paso = pasoDe(p);
+      return '<li class="line" data-id="' + esc(id) + '">' +
+        '<div class="thumb" style="--tint:' + esc(p.color || "#EEE") + '"><span aria-hidden="true">' + esc(p.emoji || "🧺") + "</span>" +
+          (p.imagen ? '<img src="' + esc(p.imagen) + '" alt="" loading="lazy" onerror="this.remove()">' : "") + "</div>" +
+        '<div class="info">' +
+          '<div class="top"><div><h3>' + esc(p.nombre) + '</h3><span class="unit">' + eur(p.precio) + " € " + porUnidad(p.unidad) + "</span></div>" +
+            '<button class="remove" type="button" data-act="del" aria-label="Eliminar ' + esc(p.nombre) + '"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></svg></button>' +
+          "</div>" +
+          '<div class="bottom">' +
+            '<div class="stepper" role="group" aria-label="Cantidad de ' + esc(p.nombre) + '">' +
+              '<button type="button" data-act="minus" aria-label="' + (cart[id] <= paso ? "Eliminar" : "Menos") + '">' + (cart[id] <= paso ? "×" : "−") + "</button>" +
+              "<output>" + fmtQty(cart[id], p.unidad) + "</output>" +
+              '<button type="button" data-act="plus" aria-label="Más"' + (round2(cart[id] + paso) > maxQty(p) ? " disabled" : "") + '>+</button>' +
+            "</div>" +
+            '<span class="sub">' + eur(lineTotal(id)) + " €</span>" +
+          "</div>" +
+        "</div>" +
+      "</li>";
+    }).join("");
+
+    $("#cartEmpty").style.display = n ? "none" : "flex";
+    $("#cartFoot").style.display = n ? "grid" : "none";
+
+    // Pedido mínimo
+    const falta = MIN > 0 ? round2(MIN - total) : 0;
+    $("#minimum").classList.toggle("show", falta > 0);
+    if (falta > 0) {
+      $("#minimumText").textContent = "Te faltan " + eur(falta) + " € para el pedido mínimo de " + eur(MIN) + " €.";
+      $("#meter").style.width = Math.min(100, (total / MIN) * 100) + "%";
+    }
+    $("#toForm").disabled = !n || falta > 0;
+    renderSummary();
+  }
+
+  $("#lines").addEventListener("click", e => {
+    const btn = e.target.closest("button[data-act]");
+    if (!btn) return;
+    const id = btn.closest(".line").dataset.id;
+    const paso = pasoDe(BY_ID[id]);
+    if (btn.dataset.act === "plus" && round2(cart[id] + paso) <= maxQty(BY_ID[id])) setQty(id, cart[id] + paso);
+    if (btn.dataset.act === "minus") setQty(id, cart[id] <= paso ? 0 : cart[id] - paso);
+    if (btn.dataset.act === "del") setQty(id, 0);
+  });
+
+  /* ---------- Abrir / cerrar el panel ---------- */
+  const drawer = $("#drawer");
+  let lastFocus = null;
+  function openCart(view){
+    lastFocus = document.activeElement;
+    showView(view || "cart");
+    document.body.classList.add("cart-open");
+    document.body.classList.remove("has-bar");
+    drawer.setAttribute("aria-hidden", "false");
+    $("#cartBtn").setAttribute("aria-expanded", "true");
+    setTimeout(() => $("#closeBtn").focus(), 50);
+  }
+  function closeCart(){
+    document.body.classList.remove("cart-open");
+    drawer.setAttribute("aria-hidden", "true");
+    $("#cartBtn").setAttribute("aria-expanded", "false");
+    renderCart();
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  function showView(v){
+    $$(".view", drawer).forEach(el => el.classList.toggle("active", el.id === "view" + cap(v)));
+    $("#backBtn").hidden = v !== "form";
+    $("#drawerTitleText").textContent = { cart: "Tu cesta", form: "Datos de la reserva", done: "Reserva" }[v];
+    $(".js-cart-items-short").style.display = v === "cart" ? "" : "none";
+    $$(".view-scroll", drawer).forEach(el => el.scrollTop = 0);
+  }
+  $("#cartBtn").addEventListener("click", () => openCart());
+  $("#cartBar").addEventListener("click", () => openCart());
+  $("#closeBtn").addEventListener("click", closeCart);
+  $("#overlay").addEventListener("click", closeCart);
+  $("#backBtn").addEventListener("click", () => showView("cart"));
+  $("#emptyCta").addEventListener("click", () => { closeCart(); location.hash = "#catalogo"; });
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape" && document.body.classList.contains("cart-open")) closeCart();
+  });
+  $("#toForm").addEventListener("click", () => { if (!$("#toForm").disabled) { showView("form"); setTimeout(() => $("#fNombre").focus({ preventScroll: true }), 80); } });
+
+  /* =========================================================
+     FORMULARIO DE RESERVA
+     ========================================================= */
+  // Franjas por día de la semana (0 = domingo … 6 = sábado). Minutos desde las 00:00.
+  const H = (h, m = 0) => h * 60 + m;
+  const FRANJAS = {
+    0: [],
+    1: [[H(8), H(11)], [H(11), H(14)], [H(17), H(20)]],
+    2: [[H(8), H(11)], [H(11), H(14)], [H(17), H(20)]],
+    3: [[H(8), H(11)], [H(11), H(14)], [H(17), H(20)]],
+    4: [[H(8), H(11)], [H(11), H(14)], [H(17), H(20)]],
+    5: [[H(8), H(11)], [H(11), H(14)], [H(17), H(20)]],
+    6: [[H(9), H(11, 30)], [H(11, 30), H(14)]]
+  };
+  const MARGEN = 60; // minutos mínimos para preparar el pedido
+  const fmtH = m => pad(Math.floor(m / 60)) + ":" + pad(m % 60);
+  const franjaTxt = f => fmtH(f[0]) + "–" + fmtH(f[1]);
+
+  function franjasDe(iso){
+    const day = fromISO(iso).getDay();
+    let fr = FRANJAS[day] || [];
+    if (iso === NOW.iso) fr = fr.filter(f => f[1] - MARGEN > NOW.minutes);
+    return fr;
+  }
+
+  const form = $("#form");
+  const fFecha = $("#fFecha");
+  const fFranja = $("#fFranja");
+  const maxISO = addDays(NOW.iso, TIENDA.diasReserva || 14);
+  fFecha.min = NOW.iso;
+  fFecha.max = maxISO;
+
+  // Primer día con franjas disponibles
+  let firstISO = NOW.iso;
+  for (let i = 0; i < 8 && !franjasDe(firstISO).length; i++) firstISO = addDays(firstISO, 1);
+
+  function fillFranjas(keep){
+    const iso = fFecha.value;
+    const fr = iso ? franjasDe(iso) : [];
+    const prev = keep ? fFranja.value : "";
+    fFranja.innerHTML = fr.length
+      ? fr.map(f => { const t = franjaTxt(f); return '<option value="' + t + '">' + t + (f[0] < H(14) ? " (mañana)" : " (tarde)") + "</option>"; }).join("")
+      : '<option value="">Sin franjas ese día</option>';
+    if (prev && fr.some(f => franjaTxt(f) === prev)) fFranja.value = prev;
+    fFranja.disabled = !fr.length;
+  }
+
+  // Datos del cliente recordados para la próxima vez
+  const CLIENT_KEY = "fj-cliente-v1";
+  const saved = store.get(CLIENT_KEY, {});
+  if (saved.nombre) form.nombre.value = saved.nombre;
+  if (saved.telefono) form.telefono.value = saved.telefono;
+  if (saved.direccion) form.direccion.value = saved.direccion;
+  if (saved.entrega === "reparto") $("#eReparto").checked = true;
+  fFecha.value = firstISO;
+  fillFranjas();
+
+  const entrega = () => form.entrega.value;
+  function toggleAddr(){
+    const rep = entrega() === "reparto";
+    $("#addrWrap").classList.toggle("open", rep);
+    form.direccion.required = rep;
+    form.direccion.tabIndex = rep ? 0 : -1;
+    renderSummary();
+  }
+  $$('input[name="entrega"]').forEach(r => r.addEventListener("change", toggleAddr));
+  toggleAddr();
+
+  fFecha.addEventListener("change", () => { fillFranjas(true); validate("fecha"); });
+  form.privacidad.addEventListener("change", () => validate("privacidad"));
+
+  function fechaLarga(iso){
+    const d = fromISO(iso);
+    return cap(d.toLocaleDateString("es-ES", { weekday: "long", day: "numeric", month: "long" }));
+  }
+
+  function renderSummary(){
+    const box = $("#summary");
+    if (!box) return;
+    const ids = cartIds();
+    box.innerHTML = '<strong style="color:var(--leaf-dark)">Tu pedido</strong>' +
+      ids.map(id => '<div class="s-row"><span>' + esc(lineaTxt(BY_ID[id], cart[id])) + "</span><span>" + eur(lineTotal(id)) + " €</span></div>").join("") +
+      '<div class="s-row s-total"><span>Total estimado</span><span>' + eur(cartTotal()) + " €</span></div>";
+  }
+
+  const telValido = v => {
+    const d = v.replace(/\D/g, "").replace(/^(0034|34)(?=\d{9}$)/, "");
+    return /^[6789]\d{8}$/.test(d);
+  };
+
+  function setInvalid(name, bad){
+    const f = $('[data-f="' + name + '"]', form);
+    if (f) f.classList.toggle("invalid", bad);
+    return !bad;
+  }
+  function validate(name){
+    switch (name) {
+      case "nombre": {
+        const v = form.nombre.value.trim();
+        return setInvalid("nombre", v.length < 3 || v.split(/\s+/).length < 2);
+      }
+      case "telefono": return setInvalid("telefono", !telValido(form.telefono.value));
+      case "direccion": return setInvalid("direccion", entrega() === "reparto" && form.direccion.value.trim().length < 5);
+      case "fecha": {
+        const v = fFecha.value;
+        let msg = "";
+        if (!v) msg = "Elige una fecha.";
+        else if (v < NOW.iso) msg = "Esa fecha ya ha pasado.";
+        else if (v > maxISO) msg = "Puedes reservar hasta con " + (TIENDA.diasReserva || 14) + " días de antelación.";
+        else if (fromISO(v).getDay() === 0) msg = "Los domingos cerramos. Elige de lunes a sábado.";
+        else if (!franjasDe(v).length) msg = "Para hoy ya no da tiempo a prepararlo. Elige otro día.";
+        $("#fechaErr").textContent = msg;
+        return setInvalid("fecha", !!msg);
+      }
+      case "franja": return setInvalid("franja", !fFranja.value);
+      case "privacidad": return setInvalid("privacidad", !form.privacidad.checked);
+    }
+    return true;
+  }
+  ["nombre", "telefono", "direccion"].forEach(n => {
+    form[n].addEventListener("blur", () => { if (form[n].value) validate(n); });
+    form[n].addEventListener("input", () => { if ($('.field[data-f="' + n + '"]', form).classList.contains("invalid")) validate(n); });
+  });
+
+  /* =========================================================
+     MENSAJE DE WHATSAPP
+     ========================================================= */
+  function buildMessage(d){
+    const L = [];
+    L.push("🍊 *NUEVA RESERVA – " + TIENDA.nombre.toUpperCase() + "*");
+    L.push("");
+    L.push("👤 *Cliente:* " + d.nombre);
+    L.push("📞 *Teléfono:* " + d.telefono);
+    L.push("🚚 *Entrega:* " + (d.entrega === "reparto" ? "Reparto a domicilio" : "Recogida en tienda"));
+    if (d.entrega === "reparto") L.push("📍 *Dirección:* " + d.direccion);
+    L.push("📅 *Fecha:* " + fechaLarga(d.fecha) + " – " + d.franja);
+    L.push("");
+    L.push("🛒 *Pedido:*");
+    cartIds().forEach(id => {
+      const p = BY_ID[id];
+      L.push("• " + lineaTxt(p, cart[id]) + " – " + eur(lineTotal(id)) + " €");
+    });
+    L.push("");
+    L.push("💶 *Total estimado:* " + eur(cartTotal()) + " €");
+    L.push("📝 *Observaciones:* " + (d.observaciones || "Ninguna"));
+    L.push("");
+    L.push("Quedo a la espera de confirmación. ¡Gracias!");
+    return L.join("\n");
+  }
+
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    if (!cartIds().length) { showView("cart"); return; }
+    if (MIN > 0 && cartTotal() < MIN) { showView("cart"); toast("Aún no llegas al pedido mínimo de " + eur(MIN) + " €"); return; }
+
+    const checks = ["nombre", "telefono", "direccion", "fecha", "franja", "privacidad"].map(n => [n, validate(n)]);
+    const firstBad = checks.find(c => !c[1]);
+    if (firstBad) {
+      const el = form[firstBad[0]];
+      el.focus();
+      el.scrollIntoView({ block: "center", behavior: "smooth" });
+      return;
+    }
+
+    const d = {
+      nombre: form.nombre.value.trim().replace(/\s+/g, " "),
+      telefono: form.telefono.value.trim(),
+      entrega: entrega(),
+      direccion: form.direccion.value.trim(),
+      fecha: fFecha.value,
+      franja: fFranja.value,
+      observaciones: form.observaciones.value.trim()
+    };
+    store.set(CLIENT_KEY, { nombre: d.nombre, telefono: d.telefono, direccion: d.direccion, entrega: d.entrega });
+
+    const url = waLink(buildMessage(d));
+    $("#reopenWa").href = url;
+    $("#doneRef").textContent = (d.entrega === "reparto" ? "Reparto" : "Recogida") + " · " + fechaLarga(d.fecha) + " · " + d.franja;
+    // Nota: window.open con "noopener" devuelve siempre null, por eso se corta el opener a mano.
+    const win = window.open(url, "_blank");
+    if (win) { try { win.opener = null; } catch (err) {} }
+    showView("done");
+    if (!win) setTimeout(() => { location.href = url; }, 300);
+  });
+
+  $("#clearBtn").addEventListener("click", () => {
+    cart = {};
+    saveCart();
+    form.observaciones.value = "";
+    form.privacidad.checked = false;
+    closeCart();
+    toast("Cesta vaciada. ¡Gracias por tu reserva! 🍊");
+  });
+  $("#keepBtn").addEventListener("click", closeCart);
+
+  /* =========================================================
+     HORARIO Y ESTADO ABIERTO / CERRADO
+     ========================================================= */
+  const APERTURA = {
+    0: [], 1: [[H(8), H(14)], [H(17), H(20)]], 2: [[H(8), H(14)], [H(17), H(20)]], 3: [[H(8), H(14)], [H(17), H(20)]],
+    4: [[H(8), H(14)], [H(17), H(20)]], 5: [[H(8), H(14)], [H(17), H(20)]], 6: [[H(9), H(14)]]
+  };
+  const DIAS = ["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"];
+  const fmtS = m => Math.floor(m / 60) + ":" + pad(m % 60);
+  $("#days").innerHTML = [1,2,3,4,5,6,0].map(d => {
+    const s = APERTURA[d];
+    return '<li class="' + (s.length ? "" : "off") + (d === NOW.day ? " today" : "") + '"><span>' + DIAS[d] + (d === NOW.day ? " · hoy" : "") +
+      '</span><span class="h">' + (s.length ? s.map(x => fmtS(x[0]) + "–" + fmtS(x[1])).join(" · ") : "Cerrado") + "</span></li>";
+  }).join("");
+  const abierto = APERTURA[NOW.day].find(s => NOW.minutes >= s[0] && NOW.minutes < s[1]);
+  $("#status").classList.toggle("closed", !abierto);
+  $("#statusText").textContent = abierto ? "Abierto ahora · hasta las " + fmtS(abierto[1]) : "Ahora cerrado · puedes dejar tu reserva igualmente";
+
+  /* =========================================================
+     OPINIONES (solo se muestran las que pongas en productos.js)
+     ========================================================= */
+  (function(){
+    const lista = (typeof RESENAS !== "undefined" ? RESENAS : []).filter(r => r && r.texto);
+    const body = $("#reviewsBody");
+    const stars = n => "★".repeat(n) + "☆".repeat(5 - n);
+    const cta = TIENDA.googleResenas
+      ? '<a class="btn btn-green" href="' + esc(TIENDA.googleResenas) + '" target="_blank" rel="noopener">Déjanos tu opinión en Google</a>'
+      : '<a class="btn btn-green" href="' + esc(waLink("Hola, quería dejaros una opinión sobre la frutería")) + '" target="_blank" rel="noopener">Cuéntanos qué tal por WhatsApp</a>';
+    if (!lista.length) {
+      body.innerHTML = '<div class="rev-empty reveal"><div class="big" aria-hidden="true">💬</div>' +
+        "<h3>Tu opinión nos importa</h3>" +
+        "<p>¿Has comprado con nosotros? Cuéntanos qué tal fue tu fruta y tu experiencia: nos ayuda a mejorar y a otros vecinos a decidirse.</p>" + cta + "</div>";
+      return;
+    }
+    const media = lista.reduce((s, r) => s + (Number(r.estrellas) || 5), 0) / lista.length;
+    const sc = $("#revScore");
+    sc.hidden = false;
+    sc.innerHTML = '<span class="big">' + media.toLocaleString("es-ES", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) +
+      '</span><span><span class="stars" aria-hidden="true">' + stars(Math.round(media)) + "</span><br>" + lista.length + (lista.length === 1 ? " opinión" : " opiniones") + "</span>";
+    body.innerHTML = '<div class="rev-grid">' + lista.map(r => {
+      const n = Math.max(1, Math.min(5, Math.round(Number(r.estrellas) || 5)));
+      return '<blockquote class="rev reveal" style="margin:0"><span class="stars" role="img" aria-label="' + n + ' de 5 estrellas">' + stars(n) + "</span>" +
+        "<p>“" + esc(r.texto) + "”</p><footer>" + esc(r.nombre || "Cliente") + (r.fecha ? " · " + esc(r.fecha) : "") + "</footer></blockquote>";
+    }).join("") + "</div>" + '<p style="margin-top:22px;text-align:center">' + cta + "</p>";
+  })();
+
+  /* ---------- Mapa: se carga solo al pulsar (evita cookies de Google sin permiso) ---------- */
+  $("#mapLoad").addEventListener("click", () => {
+    const f = document.createElement("iframe");
+    f.title = "Mapa: Frutería Jiménez, C. Jaime I el Conquistador 42, Ibi";
+    f.src = "https://maps.google.com/maps?q=C.%20Jaime%20I%20el%20Conquistador%2042%2C%2003440%20Ibi%2C%20Alicante&z=17&output=embed";
+    f.referrerPolicy = "no-referrer-when-downgrade";
+    $("#mapBox").replaceWith(f);
+  });
+
+  /* ---------- Pedido mínimo en las preguntas frecuentes ---------- */
+  if (MIN > 0) $(".js-min-faq").textContent = "El pedido mínimo es de " + eur(MIN) + " €.";
+
+  /* =========================================================
+     TOAST + ANIMACIONES DE SCROLL
+     ========================================================= */
+  let toastT;
+  function toast(msg){
+    const t = $("#toast");
+    t.textContent = msg;
+    t.classList.add("show");
+    clearTimeout(toastT);
+    toastT = setTimeout(() => t.classList.remove("show"), 2400);
+  }
+
+  let io = null;
+  if ("IntersectionObserver" in window) {
+    io = new IntersectionObserver(entries => {
+      entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add("visible"); io.unobserve(en.target); } });
+    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+  }
+  function observe(els){
+    els.forEach((el, i) => {
+      if (el.classList.contains("product")) el.style.setProperty("--d", (i % 4) * 0.06 + "s");
+      if (io) io.observe(el); else el.classList.add("visible");
+    });
+  }
+
+  /* ---------- Arranque ---------- */
+  renderGrid();
+  renderCart();
+  observe($$(".reveal:not(.product)"));
+  if (quitados.length) setTimeout(() => toast("Hemos quitado de tu cesta fruta que ya no está disponible"), 600);
+})();
+</script>
+</body>
+</html>

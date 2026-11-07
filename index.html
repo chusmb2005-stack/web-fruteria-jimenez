@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Frutería Jiménez · Fruta y verdura fresca en Ibi</title>
+<meta name="description" content="Frutería Jiménez en Ibi (Alicante): fruta y verdura fresca de temporada y de proximidad, frutos secos, conservas gourmet, cestas regalo y entrega a domicilio.">
+<meta name="theme-color" content="#2F5D3A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* =========================================================
+   VARIABLES
+   ========================================================= */
+:root{
+  --cream:#FBF7EE;
+  --cream-2:#F4EDDC;
+  --paper:#FFFDF8;
+  --leaf:#2F5D3A;
+  --leaf-dark:#1F4029;
+  --olive:#6E7B3B;
+  --sage:#DCE5CF;
+  --orange:#E8772E;
+  --tomato:#D64527;
+  --lemon:#F2C94C;
+  --ink:#23271F;
+  --muted:#5E6555;
+  --line:rgba(47,93,58,.14);
+  --radius:22px;
+  --radius-sm:14px;
+  --shadow:0 10px 30px -12px rgba(31,64,41,.25);
+  --shadow-lg:0 24px 50px -18px rgba(31,64,41,.35);
+  --serif:"Fraunces", Georgia, "Times New Roman", serif;
+  --sans:"Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+
+/* =========================================================
+   BASE
+   ========================================================= */
+*,*::before,*::after{box-sizing:border-box}
+html{overflow-x:clip;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.6;
+  color:var(--ink);
+  background:var(--cream);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.1;margin:0;letter-spacing:-.01em}
+p{margin:0}
+.container{width:100%;max-width:1160px;margin:0 auto;padding:0 20px}
+section{position:relative}
+.section{padding:84px 0}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--olive);
+}
+.eyebrow::before{content:"";width:22px;height:2px;background:var(--orange);border-radius:2px}
+.section-title{font-size:clamp(2rem,6.5vw,3.2rem);margin:12px 0 14px;color:var(--leaf-dark)}
+.section-title em{font-style:italic;color:var(--orange);font-weight:600}
+.section-lead{color:var(--muted);max-width:56ch;font-size:1.05rem}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+
+/* Botones */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:15px 24px;border-radius:999px;border:0;cursor:pointer;
+  font:600 1rem/1 var(--sans);text-decoration:none;
+  transition:transform .25s var(--ease), box-shadow .25s var(--ease), background .25s;
+  -webkit-tap-highlight-color:transparent;
+}
+.btn svg{width:20px;height:20px;flex:none}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:var(--orange);color:#fff;box-shadow:0 10px 24px -8px rgba(232,119,46,.6)}
+.btn-primary:hover{background:#d9661d;transform:translateY(-2px)}
+.btn-ghost{background:rgba(255,255,255,.14);color:#fff;border:1.5px solid rgba(255,255,255,.55);backdrop-filter:blur(6px)}
+.btn-ghost:hover{background:rgba(255,255,255,.24);transform:translateY(-2px)}
+.btn-green{background:var(--leaf);color:#fff}
+.btn-green:hover{background:var(--leaf-dark);transform:translateY(-2px)}
+
+/* =========================================================
+   CABECERA
+   ========================================================= */
+.header{
+  position:fixed;inset:0 0 auto 0;z-index:50;
+  transition:background .35s, box-shadow .35s, padding .35s;
+  padding:14px 0;
+}
+.header.scrolled{background:rgba(251,247,238,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line);padding:10px 0}
+.header .container{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.wordmark{
+  font-family:var(--serif);font-weight:700;font-size:1.45rem;letter-spacing:-.02em;
+  text-decoration:none;color:#fff;line-height:1;display:flex;flex-direction:column;
+  transition:color .35s;
+}
+.wordmark small{
+  font-family:var(--sans);font-size:.62rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
+  margin-top:5px;opacity:.85;
+}
+.wordmark .dot{color:var(--lemon)}
+.header.scrolled .wordmark{color:var(--leaf-dark)}
+.header.scrolled .wordmark .dot{color:var(--orange)}
+.nav{display:none}
+.nav a{
+  text-decoration:none;color:#fff;font-weight:500;font-size:.95rem;padding:8px 12px;border-radius:999px;
+  transition:background .25s,color .35s;
+}
+.nav a:hover{background:rgba(255,255,255,.16)}
+.header.scrolled .nav a{color:var(--ink)}
+.header.scrolled .nav a:hover{background:var(--sage)}
+.head-actions{display:flex;align-items:center;gap:8px}
+.nav a[href="tienda.html"]{display:none}
+.shop-btn{
+  display:inline-flex;align-items:center;gap:8px;padding:11px 16px;border-radius:999px;
+  background:var(--orange);color:#fff;font-weight:700;font-size:.9rem;text-decoration:none;white-space:nowrap;
+  box-shadow:0 8px 20px -8px rgba(232,119,46,.7);transition:transform .25s var(--ease),background .25s;
+}
+.shop-btn svg{width:18px;height:18px}
+.shop-btn:hover{background:#d9661d;transform:translateY(-2px)}
+.menu-open .shop-btn{opacity:0;pointer-events:none}
+.menu-btn{
+  width:46px;height:46px;border-radius:50%;border:0;cursor:pointer;
+  background:rgba(255,255,255,.18);backdrop-filter:blur(6px);
+  display:grid;place-items:center;color:#fff;transition:background .3s,color .3s;
+}
+.header.scrolled .menu-btn{background:var(--sage);color:var(--leaf-dark)}
+.menu-btn span,.menu-btn span::before,.menu-btn span::after{
+  display:block;width:20px;height:2px;background:currentColor;border-radius:2px;position:relative;transition:transform .3s var(--ease),background .3s;
+}
+.menu-btn span::before,.menu-btn span::after{content:"";position:absolute;left:0}
+.menu-btn span::before{top:-6px}
+.menu-btn span::after{top:6px}
+.menu-open .menu-btn span{background:transparent}
+.menu-open .menu-btn span::before{transform:translateY(6px) rotate(45deg)}
+.menu-open .menu-btn span::after{transform:translateY(-6px) rotate(-45deg)}
+
+.mobile-menu{
+  position:fixed;inset:0;z-index:40;background:var(--leaf-dark);
+  display:flex;flex-direction:column;justify-content:center;padding:100px 28px 40px;gap:6px;
+  opacity:0;pointer-events:none;transition:opacity .35s var(--ease);
+}
+.mobile-menu a{
+  font-family:var(--serif);font-size:2.1rem;color:var(--cream);text-decoration:none;padding:6px 0;
+  transform:translateY(16px);opacity:0;transition:transform .45s var(--ease),opacity .45s var(--ease),color .2s;
+}
+.mobile-menu a:hover{color:var(--lemon)}
+.menu-open .mobile-menu{opacity:1;pointer-events:auto}
+.menu-open .mobile-menu a{transform:none;opacity:1}
+.menu-open .mobile-menu a:nth-child(2){transition-delay:.04s}
+.menu-open .mobile-menu a:nth-child(3){transition-delay:.08s}
+.menu-open .mobile-menu a:nth-child(4){transition-delay:.12s}
+.menu-open .mobile-menu a:nth-child(5){transition-delay:.16s}
+.menu-open .mobile-menu a:nth-child(6){transition-delay:.2s}
+.menu-open .header{background:transparent;box-shadow:none}
+.menu-open .header .wordmark{color:var(--cream)}
+.menu-open .header .menu-btn{background:rgba(255,255,255,.12);color:#fff}
+.menu-open{overflow:hidden}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+.hero{
+  min-height:100svh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;
+  background:var(--leaf-dark);
+  padding:120px 0 64px;
+}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);animation:heroZoom 14s var(--ease) forwards}
+@keyframes heroZoom{to{transform:scale(1)}}
+.hero-bg::after{
+  content:"";position:absolute;inset:0;
+  background:
+    linear-gradient(180deg,rgba(20,38,25,.55) 0%,rgba(20,38,25,.15) 35%,rgba(20,38,25,.78) 78%,rgba(20,38,25,.92) 100%);
+}
+.hero .container{position:relative;z-index:1}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(8px);
+  padding:8px 14px;border-radius:999px;font-size:.82rem;font-weight:500;margin-bottom:22px;
+}
+.hero-badge .pulse{width:8px;height:8px;border-radius:50%;background:var(--lemon);box-shadow:0 0 0 0 rgba(242,201,76,.7);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(242,201,76,0)}100%{box-shadow:0 0 0 0 rgba(242,201,76,0)}}
+.hero h1{font-size:clamp(2.6rem,11vw,5.6rem);font-weight:600;max-width:13ch;letter-spacing:-.025em}
+.hero h1 em{font-style:italic;color:var(--lemon);font-weight:400}
+.hero p.lead{font-size:clamp(1.05rem,3.6vw,1.25rem);max-width:44ch;margin:20px 0 30px;color:rgba(255,255,255,.88)}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
+.hero-ctas .btn{flex:1 1 auto}
+.hero-facts{
+  display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:38px;padding-top:22px;border-top:1px solid rgba(255,255,255,.2);
+  font-size:.9rem;color:rgba(255,255,255,.85);
+}
+.hero-facts span{display:inline-flex;align-items:center;gap:8px}
+.hero-facts svg{width:18px;height:18px;color:var(--lemon)}
+.scroll-hint{display:none}
+
+/* Marquee de producto */
+.ticker{background:var(--orange);color:#fff;overflow:hidden;padding:14px 0;transform:rotate(-1.2deg) scaleX(1.03);margin:-14px 0 0;position:relative;z-index:2}
+.ticker-track{display:flex;gap:34px;width:max-content;animation:ticker 32s linear infinite;font-family:var(--serif);font-size:1.25rem;font-style:italic;white-space:nowrap}
+.ticker-track span{display:inline-flex;align-items:center;gap:34px}
+.ticker-track span::after{content:"✦";font-style:normal;font-size:.8rem;color:var(--lemon)}
+@keyframes ticker{to{transform:translateX(-50%)}}
+
+/* =========================================================
+   SOBRE NOSOTROS
+   ========================================================= */
+.about{background:var(--cream)}
+.about-grid{display:grid;gap:44px;align-items:center}
+.about-media{position:relative}
+.about-media .img-main{
+  border-radius:var(--radius);overflow:hidden;aspect-ratio:4/5;box-shadow:var(--shadow-lg);background:var(--sage);
+}
+.about-media .img-main img{width:100%;height:100%;object-fit:cover}
+.about-stamp{
+  position:absolute;right:-6px;bottom:-22px;width:132px;height:132px;border-radius:50%;
+  background:var(--lemon);color:var(--leaf-dark);display:grid;place-items:center;text-align:center;
+  font-family:var(--serif);font-weight:600;line-height:1.05;font-size:1.05rem;padding:16px;
+  box-shadow:var(--shadow);transform:rotate(-10deg);
+}
+.about-stamp b{display:block;font-size:2rem;font-style:italic}
+.about-text p{color:var(--muted);margin-bottom:14px;font-size:1.05rem}
+.about-text p strong{color:var(--ink);font-weight:600}
+.pillars{display:grid;grid-template-columns:1fr;gap:12px;margin-top:26px}
+.pillar{
+  display:flex;gap:14px;align-items:flex-start;background:var(--paper);border:1px solid var(--line);
+  border-radius:var(--radius-sm);padding:16px 18px;transition:transform .3s var(--ease),box-shadow .3s;
+}
+.pillar:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.pillar .ico{flex:none;width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:var(--sage);color:var(--leaf)}
+.pillar .ico svg{width:22px;height:22px}
+.pillar h3{font-size:1.1rem;color:var(--leaf-dark);margin-bottom:2px}
+.pillar p{font-size:.93rem;color:var(--muted);margin:0}
+
+/* =========================================================
+   PRODUCTOS
+   ========================================================= */
+.products{background:var(--paper);border-radius:36px 36px 0 0}
+.products-head{display:flex;flex-direction:column;gap:6px;margin-bottom:38px}
+.cards{display:grid;grid-template-columns:1fr;gap:18px}
+.card{
+  position:relative;border-radius:var(--radius);overflow:hidden;min-height:300px;
+  background:var(--leaf);color:#fff;isolation:isolate;
+  box-shadow:var(--shadow);cursor:default;
+  transition:transform .45s var(--ease),box-shadow .45s var(--ease);
+  -webkit-tap-highlight-color:transparent;
+}
+.card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .8s var(--ease)}
+.card::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(0,0,0,0) 30%,rgba(18,34,22,.85) 100%)}
+.card-body{position:absolute;left:0;right:0;bottom:0;padding:22px}
+.card-tag{
+  display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  background:var(--c,var(--lemon));color:var(--leaf-dark);padding:5px 10px;border-radius:999px;margin-bottom:10px;
+}
+.card h3{font-size:1.75rem;margin-bottom:6px}
+.card p{color:rgba(255,255,255,.88);font-size:.97rem;max-width:34ch}
+.card .arrow{
+  position:absolute;top:18px;right:18px;width:44px;height:44px;border-radius:50%;
+  background:rgba(255,255,255,.2);backdrop-filter:blur(6px);display:grid;place-items:center;
+  transition:transform .4s var(--ease),background .3s;
+}
+.card .arrow svg{width:20px;height:20px}
+.card:hover,.card.tapped{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.card:hover img,.card.tapped img{transform:scale(1.07)}
+.card:hover .arrow,.card.tapped .arrow{transform:rotate(-45deg);background:var(--orange)}
+.card.fallback-1{background:linear-gradient(135deg,#E8772E,#D64527)}
+.card.fallback-2{background:linear-gradient(135deg,#6E7B3B,#2F5D3A)}
+.card.fallback-3{background:linear-gradient(135deg,#9C6B3E,#5B3A1E)}
+.card.fallback-4{background:linear-gradient(135deg,#8C2F1E,#3F1D14)}
+.card.fallback-5{background:linear-gradient(135deg,#F2C94C,#E8772E)}
+
+/* =========================================================
+   DE TEMPORADA
+   ========================================================= */
+.season{background:var(--leaf-dark);color:var(--cream);overflow:hidden}
+.season .eyebrow{color:var(--lemon)}
+.season .section-title{color:var(--cream)}
+.season .section-title em{color:var(--lemon)}
+.season .section-lead{color:rgba(251,247,238,.75)}
+.season-blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.35;pointer-events:none}
+.season-blob.b1{width:340px;height:340px;background:var(--orange);top:-120px;right:-120px}
+.season-blob.b2{width:280px;height:280px;background:var(--olive);bottom:-100px;left:-100px}
+.months{
+  display:flex;gap:8px;overflow-x:auto;padding:4px 2px 12px;margin:30px -20px 22px;padding-left:20px;padding-right:20px;
+  scrollbar-width:none;scroll-snap-type:x proximity;
+}
+.months::-webkit-scrollbar{display:none}
+.month-chip{
+  flex:none;scroll-snap-align:center;border:1.5px solid rgba(251,247,238,.25);background:transparent;color:var(--cream);
+  font:600 .9rem var(--sans);padding:10px 16px;border-radius:999px;cursor:pointer;transition:all .25s var(--ease);
+  position:relative;
+}
+.month-chip:hover{border-color:var(--lemon)}
+.month-chip.active{background:var(--lemon);color:var(--leaf-dark);border-color:var(--lemon)}
+.month-chip.now::after{
+  content:"";position:absolute;top:4px;right:6px;width:7px;height:7px;border-radius:50%;background:var(--orange);
+}
+.season-panel{
+  position:relative;background:rgba(251,247,238,.06);border:1px solid rgba(251,247,238,.14);
+  border-radius:var(--radius);padding:26px 22px;backdrop-filter:blur(4px);
+}
+.season-panel-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 16px;margin-bottom:22px}
+.season-panel-head h3{font-size:clamp(1.8rem,6vw,2.6rem);color:var(--cream)}
+.season-panel-head h3 em{color:var(--lemon)}
+.season-note{font-size:.88rem;color:rgba(251,247,238,.7)}
+.season-cols{display:grid;gap:26px}
+.season-col h4{
+  font:700 .78rem var(--sans);letter-spacing:.14em;text-transform:uppercase;margin:0 0 12px;
+  display:flex;align-items:center;gap:10px;color:var(--lemon);
+}
+.season-col h4 .n{background:rgba(251,247,238,.12);color:var(--cream);padding:2px 9px;border-radius:999px;font-size:.72rem;letter-spacing:0}
+.pills{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.pills li{
+  display:inline-flex;align-items:center;gap:7px;padding:9px 14px;border-radius:999px;
+  background:var(--cream);color:var(--leaf-dark);font-weight:500;font-size:.95rem;
+  opacity:0;transform:translateY(10px) scale(.96);animation:pillIn .5s var(--ease) forwards;
+  transition:transform .25s var(--ease), background .25s;
+}
+.pills li:hover{transform:translateY(-2px) scale(1.03);background:#fff}
+.pills li .e{font-size:1.1rem;line-height:1}
+.pills.veg li{background:var(--sage)}
+@keyframes pillIn{to{opacity:1;transform:none}}
+.season-cta{margin-top:24px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.season-cta p{font-size:.95rem;color:rgba(251,247,238,.8);flex:1 1 240px}
+
+/* =========================================================
+   SERVICIOS
+   ========================================================= */
+.services{background:var(--cream)}
+.services-grid{display:grid;gap:16px;margin-top:38px}
+.service{
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:28px 24px;
+  position:relative;overflow:hidden;transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .35s;
+}
+.service::before{
+  content:"";position:absolute;width:160px;height:160px;border-radius:50%;right:-60px;top:-60px;
+  background:var(--c);opacity:.12;transition:transform .5s var(--ease),opacity .4s;
+}
+.service:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:transparent}
+.service:hover::before{transform:scale(1.6);opacity:.18}
+.service .ico{
+  width:58px;height:58px;border-radius:18px;display:grid;place-items:center;
+  background:var(--c);color:#fff;margin-bottom:18px;box-shadow:0 10px 20px -10px var(--c);
+  transition:transform .4s var(--ease);
+}
+.service:hover .ico{transform:rotate(-8deg) scale(1.06)}
+.service .ico svg{width:28px;height:28px}
+.service h3{font-size:1.5rem;color:var(--leaf-dark);margin-bottom:8px}
+.service p{color:var(--muted)}
+.service .num{position:absolute;right:22px;top:20px;font-family:var(--serif);font-style:italic;font-size:1rem;color:var(--muted);opacity:.6}
+
+/* =========================================================
+   HORARIO Y UBICACIÓN
+   ========================================================= */
+.visit{background:var(--paper)}
+.visit-grid{display:grid;gap:22px;margin-top:38px}
+.hours-card{
+  background:var(--cream);border:1px solid var(--line);border-radius:var(--radius);padding:24px 20px;
+}
+.status{
+  display:flex;align-items:center;gap:14px;padding:16px 18px;border-radius:var(--radius-sm);
+  background:var(--sage);margin-bottom:18px;transition:background .3s;
+}
+.status .light{flex:none;width:14px;height:14px;border-radius:50%;background:var(--leaf);box-shadow:0 0 0 0 rgba(47,93,58,.6);animation:pulseG 2s infinite}
+@keyframes pulseG{70%{box-shadow:0 0 0 12px rgba(47,93,58,0)}100%{box-shadow:0 0 0 0 rgba(47,93,58,0)}}
+.status.closed{background:#F8DDD5}
+.status.closed .light{background:var(--tomato);animation:none}
+.status strong{display:block;font-family:var(--serif);font-size:1.35rem;line-height:1.1;color:var(--leaf-dark)}
+.status.closed strong{color:#9B2E18}
+.status span{font-size:.9rem;color:var(--muted)}
+.days{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.day{
+  display:flex;justify-content:space-between;align-items:center;gap:12px;
+  padding:13px 16px;border-radius:12px;background:var(--paper);border:1px solid transparent;
+  transition:transform .25s var(--ease),border-color .25s;
+}
+.day:hover{transform:translateX(3px);border-color:var(--line)}
+.day .d{font-weight:600}
+.day .h{font-size:.95rem;color:var(--muted);text-align:right;font-variant-numeric:tabular-nums}
+.day.off .h{color:var(--tomato);font-weight:500}
+.day.today{background:var(--leaf);color:#fff;box-shadow:var(--shadow);transform:scale(1.02)}
+.day.today .h{color:rgba(255,255,255,.9)}
+.day.today.off .h{color:#FFD6CB}
+.day.today .d::after{
+  content:"Hoy";margin-left:10px;font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  background:var(--lemon);color:var(--leaf-dark);padding:3px 8px;border-radius:999px;vertical-align:2px;
+}
+.map-card{border-radius:var(--radius);overflow:hidden;background:var(--sage);border:1px solid var(--line);display:flex;flex-direction:column}
+.map-card iframe{width:100%;height:320px;border:0;display:block;filter:saturate(.85)}
+.map-info{padding:20px;display:flex;flex-direction:column;gap:14px;background:var(--paper)}
+.map-info .addr{display:flex;gap:12px;align-items:flex-start}
+.map-info .addr svg{flex:none;width:24px;height:24px;color:var(--orange);margin-top:2px}
+.map-info .addr strong{display:block;font-family:var(--serif);font-size:1.2rem;color:var(--leaf-dark);line-height:1.2}
+.map-info .addr span{color:var(--muted);font-size:.95rem}
+.map-actions{display:flex;flex-wrap:wrap;gap:10px}
+.map-actions .btn{flex:1 1 160px}
+
+/* =========================================================
+   CTA FINAL + FOOTER
+   ========================================================= */
+.final-cta{background:var(--paper);padding:0 0 84px}
+.final-box{
+  background:var(--orange);color:#fff;border-radius:28px;padding:44px 26px;text-align:center;position:relative;overflow:hidden;
+}
+.final-box::before,.final-box::after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.12)}
+.final-box::before{width:220px;height:220px;left:-80px;top:-80px}
+.final-box::after{width:160px;height:160px;right:-50px;bottom:-60px;background:rgba(242,201,76,.35)}
+.final-box h2{font-size:clamp(2rem,7vw,3.2rem);position:relative}
+.final-box h2 em{font-style:italic;color:var(--leaf-dark)}
+.final-box p{max-width:46ch;margin:14px auto 26px;color:rgba(255,255,255,.92);position:relative}
+.final-box .btn{position:relative;background:#fff;color:var(--leaf-dark)}
+.final-box .btn:hover{background:var(--cream);transform:translateY(-2px)}
+
+.footer{background:var(--leaf-dark);color:rgba(251,247,238,.8);padding:60px 0 110px;font-size:.95rem}
+.footer-grid{display:grid;gap:34px}
+.footer .wordmark{color:var(--cream);font-size:1.9rem}
+.footer .wordmark .dot{color:var(--lemon)}
+.footer p.tag{margin-top:14px;max-width:34ch}
+.footer h4{font:700 .75rem var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--lemon);margin:0 0 14px}
+.footer ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.footer a{text-decoration:none;color:var(--cream);transition:color .2s}
+.footer a:hover{color:var(--lemon)}
+.footer li{display:flex;gap:10px;align-items:flex-start}
+.footer li svg{flex:none;width:18px;height:18px;margin-top:3px;color:var(--lemon)}
+.footer-bottom{
+  margin-top:44px;padding-top:22px;border-top:1px solid rgba(251,247,238,.14);
+  display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;font-size:.85rem;color:rgba(251,247,238,.6);
+}
+
+/* =========================================================
+   BOTÓN FLOTANTE (FAB)
+   ========================================================= */
+.fab{
+  position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:60;
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--orange);color:#fff;text-decoration:none;font-weight:700;font-size:.98rem;
+  padding:14px 20px 14px 16px;border-radius:999px;
+  box-shadow:0 14px 30px -10px rgba(232,119,46,.65),0 4px 10px rgba(0,0,0,.12);
+  transition:transform .3s var(--ease),box-shadow .3s var(--ease),padding .3s;
+  -webkit-tap-highlight-color:transparent;
+  animation:fabIn .7s .6s var(--ease) both;
+}
+.fab svg{width:26px;height:26px;flex:none}
+.fab:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 18px 36px -10px rgba(232,119,46,.75)}
+.fab:active{transform:scale(.96)}
+.fab::before{
+  content:"";position:absolute;inset:0;border-radius:inherit;border:2px solid var(--orange);
+  animation:fabRing 2.6s 2s infinite;pointer-events:none;
+}
+@keyframes fabIn{from{opacity:0;transform:translateY(30px) scale(.8)}to{opacity:1;transform:none}}
+@keyframes fabRing{0%{opacity:.7;transform:scale(1)}80%,100%{opacity:0;transform:scale(1.25)}}
+
+/* =========================================================
+   ANIMACIONES DE SCROLL
+   ========================================================= */
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:var(--d,0s)}
+.reveal.from-left{transform:translateX(-34px)}
+.reveal.from-right{transform:translateX(34px)}
+.reveal.zoom{transform:scale(.94)}
+.reveal.visible{opacity:1;transform:none}
+
+/* =========================================================
+   RESPONSIVE (mobile-first → tablet → escritorio)
+   ========================================================= */
+@media (min-width:600px){
+  .container{padding:0 28px}
+  .pillars{grid-template-columns:1fr 1fr}
+  .cards{grid-template-columns:1fr 1fr}
+  .card.wide{grid-column:span 2}
+  .services-grid{grid-template-columns:1fr 1fr}
+  .services-grid .service:last-child{grid-column:span 2}
+  .season-cols{grid-template-columns:1fr 1fr}
+  .hero-ctas .btn{flex:0 0 auto}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .months{margin-left:0;margin-right:0;padding-left:2px;padding-right:2px;flex-wrap:wrap;overflow:visible}
+}
+@media (min-width:900px){
+  .section{padding:120px 0}
+  .nav{display:flex;gap:4px}
+  .menu-btn,.mobile-menu{display:none}
+  .header .cta-head{display:inline-flex}
+  .hero{align-items:center;padding-top:140px}
+  .scroll-hint{
+    display:flex;position:absolute;left:50%;bottom:26px;transform:translateX(-50%);z-index:1;
+    width:28px;height:44px;border:2px solid rgba(255,255,255,.6);border-radius:20px;justify-content:center;padding-top:8px;
+  }
+  .scroll-hint::after{content:"";width:4px;height:8px;border-radius:2px;background:#fff;animation:scrollHint 1.8s infinite}
+  @keyframes scrollHint{0%{opacity:0;transform:translateY(0)}40%{opacity:1}100%{opacity:0;transform:translateY(12px)}}
+  .about-grid{grid-template-columns:1fr 1.1fr;gap:80px}
+  .about-stamp{right:-30px;width:150px;height:150px}
+  .products-head{flex-direction:row;align-items:flex-end;justify-content:space-between}
+  .cards{grid-template-columns:repeat(6,1fr);grid-auto-rows:280px}
+  .card{min-height:0}
+  .card:nth-child(1){grid-column:span 3;grid-row:span 2}
+  .card:nth-child(2){grid-column:span 3}
+  .card:nth-child(3){grid-column:span 3}
+  .card:nth-child(4){grid-column:span 3}
+  .card:nth-child(5){grid-column:span 3}
+  .card.wide{grid-column:span 3}
+  .card:nth-child(1) h3{font-size:2.4rem}
+  .season-panel{padding:40px}
+  .services-grid{grid-template-columns:repeat(3,1fr)}
+  .services-grid .service:last-child{grid-column:auto}
+  .visit-grid{grid-template-columns:1fr 1.2fr;align-items:stretch}
+  .map-card iframe{height:100%;min-height:360px;flex:1}
+  .final-box{padding:70px 40px}
+  .footer{padding-bottom:60px}
+  .footer-grid{grid-template-columns:1.4fr 1fr 1fr}
+}
+@media (min-width:1200px){
+  .cards{grid-template-columns:repeat(4,1fr);grid-auto-rows:270px}
+  .card:nth-child(1){grid-column:span 2;grid-row:span 2}
+  .card:nth-child(2),.card:nth-child(3){grid-column:span 1}
+  .card:nth-child(4){grid-column:span 1}
+  .card:nth-child(5){grid-column:span 1}
+}
+@media (max-width:420px){
+  .wordmark{font-size:1.15rem}
+  .wordmark > span{white-space:nowrap}
+  .wordmark small{font-size:.55rem;letter-spacing:.16em}
+  .shop-btn{padding:10px 13px;font-size:.84rem;gap:6px}
+  .shop-btn svg{display:none}
+  .menu-btn{width:42px;height:42px}
+  .header .container{padding:0 14px;gap:10px}
+  .wordmark small{white-space:nowrap}
+}
+@media (max-width:340px){.shop-btn span{display:none}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===================== CABECERA ===================== -->
+<header class="header" id="header">
+  <div class="container">
+    <a href="#inicio" class="wordmark" aria-label="Frutería Jiménez, ir al inicio">
+      <span>Frutería Jiménez<span class="dot">.</span></span>
+      <small>Fruta y verdura · Ibi</small>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#nosotros">Nosotros</a>
+      <a href="#productos">Productos</a>
+      <a href="#temporada">Temporada</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#visitanos">Horario</a>
+      <a href="tienda.html">Tienda online</a>
+    </nav>
+    <div class="head-actions"><a class="shop-btn" href="tienda.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h14l-1.5 9.5a2 2 0 0 1-2 1.5h-7a2 2 0 0 1-2-1.5z"/><path d="M9 10l3-6 3 6"/><path d="M3 10h18"/></svg><span>Tienda online</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu"><span></span></button></div>
+  </div>
+</header>
+
+<nav class="mobile-menu" id="mobileMenu" aria-label="Menú móvil">
+  <a href="#inicio">Inicio</a>
+  <a href="#nosotros">Nosotros</a>
+  <a href="#productos">Productos</a>
+  <a href="#temporada">De temporada</a>
+  <a href="#servicios">Servicios</a>
+  <a href="#visitanos">Horario y ubicación</a>
+  <a href="tienda.html">Tienda online</a>
+</nav>
+
+<main>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="inicio">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=1800&q=75"
+         alt="Cajas de fruta y verdura fresca en un puesto de mercado" fetchpriority="high"
+         onerror="this.style.display='none'">
+  </div>
+  <div class="container">
+    <div class="hero-badge reveal"><span class="pulse"></span> Producto fresco que llega cada mañana</div>
+    <h1 class="reveal" style="--d:.08s">Lo más fresco de la huerta, <em>a la vuelta de la esquina.</em></h1>
+    <p class="lead reveal" style="--d:.16s">Fruta y verdura de temporada y de proximidad, elegida pieza a pieza y con el trato cercano de toda la vida. En el centro de Ibi.</p>
+    <div class="hero-ctas reveal" style="--d:.24s">
+      <a class="btn btn-primary" href="tienda.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h14l-1.5 9.5a2 2 0 0 1-2 1.5h-7a2 2 0 0 1-2-1.5z"/><path d="M9 10l3-6 3 6"/><path d="M3 10h18"/></svg>
+        Tienda online
+      </a>
+      <a class="btn btn-ghost" href="#temporada">Ver qué hay de temporada</a>
+    </div>
+    <div class="hero-facts reveal" style="--d:.32s">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg> C. Jaime I el Conquistador, 42</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> <b id="heroStatus">Lun a Sáb</b></span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg> Entrega a domicilio en Ibi</span>
+    </div>
+  </div>
+  <a href="#nosotros" class="scroll-hint" aria-label="Bajar"></a>
+</section>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Fruta de temporada</span><span>Verdura de la zona</span><span>Frutos secos</span><span>Conservas gourmet</span><span>Cestas regalo</span><span>Pedidos por encargo</span><span>Reparto en Ibi</span>
+    <span>Fruta de temporada</span><span>Verdura de la zona</span><span>Frutos secos</span><span>Conservas gourmet</span><span>Cestas regalo</span><span>Pedidos por encargo</span><span>Reparto en Ibi</span>
+  </div>
+</div>
+
+<!-- ===================== SOBRE NOSOTROS ===================== -->
+<section class="about section" id="nosotros">
+  <div class="container about-grid">
+    <div class="about-media reveal from-left">
+      <div class="img-main">
+        <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1000&q=75"
+             alt="Fruta y verdura fresca expuesta en cajas" loading="lazy" onerror="this.style.display='none'">
+      </div>
+      <div class="about-stamp"><div><b>Cada</b>mañana, género fresco</div></div>
+    </div>
+    <div class="about-text">
+      <span class="eyebrow reveal">Sobre nosotros</span>
+      <h2 class="section-title reveal" style="--d:.06s">Tu frutería de <em>siempre</em>, en tu barrio.</h2>
+      <p class="reveal" style="--d:.12s">En <strong>Frutería Jiménez</strong> creemos que comer bien empieza por elegir bien. Por eso cada mañana seleccionamos el género a mano, priorizando a los <strong>agricultores de la zona</strong> y la fruta y verdura que está en su mejor momento.</p>
+      <p class="reveal" style="--d:.18s">Aquí te conocemos por tu nombre. Te decimos qué está en su punto, cómo conservarlo y qué va mejor para cada receta. Ese trato cercano y familiar es lo que nos hace diferentes.</p>
+      <div class="pillars">
+        <div class="pillar reveal" style="--d:.2s">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div>
+          <div><h3>Fresco cada día</h3><p>Género que llega cada mañana, nada de cámaras eternas.</p></div>
+        </div>
+        <div class="pillar reveal" style="--d:.26s">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+          <div><h3>De temporada</h3><p>Cada fruta en su mes, cuando tiene más sabor.</p></div>
+        </div>
+        <div class="pillar reveal" style="--d:.32s">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><h3>De proximidad</h3><p>De agricultores de la zona siempre que es posible.</p></div>
+        </div>
+        <div class="pillar reveal" style="--d:.38s">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+          <div><h3>Trato de siempre</h3><p>Te asesoramos con cariño y sin prisas.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PRODUCTOS ===================== -->
+<section class="products section" id="productos">
+  <div class="container">
+    <div class="products-head">
+      <div>
+        <span class="eyebrow reveal">Lo que encontrarás</span>
+        <h2 class="section-title reveal" style="--d:.06s">Un mercado de calidad, <em>en pequeño.</em></h2>
+      </div>
+      <p class="section-lead reveal" style="--d:.12s">Todo lo que necesitas para una cocina sana y sabrosa, elegido con el mismo cuidado que si fuera para nuestra casa.</p>
+    </div>
+
+    <div class="cards">
+      <article class="card fallback-1 reveal zoom" tabindex="0">
+        <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=1100&q=75" alt="Surtido de frutas frescas de colores" loading="lazy" onerror="this.style.display='none'">
+        <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <div class="card-body">
+          <span class="card-tag" style="--c:var(--lemon)">Frutas</span>
+          <h3>Frutas</h3>
+          <p>Dulces, jugosas y en su punto. Te decimos cuál comer hoy y cuál dejar para el fin de semana.</p>
+        </div>
+      </article>
+      <article class="card fallback-2 reveal zoom" style="--d:.08s" tabindex="0">
+        <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=900&q=75" alt="Verduras y hortalizas frescas" loading="lazy" onerror="this.style.display='none'">
+        <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <div class="card-body">
+          <span class="card-tag" style="--c:#BFD89A">Huerta</span>
+          <h3>Verduras y hortalizas</h3>
+          <p>De la huerta a tu cocina, con todo su sabor.</p>
+        </div>
+      </article>
+      <article class="card fallback-3 reveal zoom" style="--d:.14s" tabindex="0">
+        <img src="https://images.unsplash.com/photo-1599599810769-bcde5a160d32?auto=format&fit=crop&w=900&q=75" alt="Frutos secos variados" loading="lazy" onerror="this.style.display='none'">
+        <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <div class="card-body">
+          <span class="card-tag" style="--c:#F3D9B1">Para picar</span>
+          <h3>Frutos secos</h3>
+          <p>Almendras, nueces y más, para picar con cabeza.</p>
+        </div>
+      </article>
+      <article class="card fallback-4 reveal zoom" style="--d:.2s" tabindex="0">
+        <img src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=900&q=75" alt="Aceite de oliva y productos gourmet" loading="lazy" onerror="this.style.display='none'">
+        <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <div class="card-body">
+          <span class="card-tag" style="--c:#F5B79A">Despensa</span>
+          <h3>Conservas y gourmet</h3>
+          <p>Caprichos de despensa con sabor de aquí.</p>
+        </div>
+      </article>
+      <article class="card fallback-5 reveal zoom" style="--d:.26s" tabindex="0">
+        <img src="https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?auto=format&fit=crop&w=900&q=75" alt="Cesta con fruta variada para regalar" loading="lazy" onerror="this.style.display='none'">
+        <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <div class="card-body">
+          <span class="card-tag" style="--c:var(--lemon)">Para regalar</span>
+          <h3>Cestas regalo</h3>
+          <p>El regalo más sano y bonito, preparado a tu gusto.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DE TEMPORADA ===================== -->
+<section class="season section" id="temporada">
+  <span class="season-blob b1"></span><span class="season-blob b2"></span>
+  <div class="container" style="position:relative">
+    <span class="eyebrow reveal">De temporada este mes</span>
+    <h2 class="section-title reveal" style="--d:.06s">Lo que está <em>en su mejor momento.</em></h2>
+    <p class="section-lead reveal" style="--d:.12s">Comer de temporada es comer con más sabor, más nutrientes y mejor precio. Esto es lo que manda ahora en nuestras cajas.</p>
+
+    <div class="months reveal" style="--d:.16s" id="months" role="tablist" aria-label="Elegir mes"></div>
+
+    <div class="season-panel reveal" style="--d:.2s" id="seasonPanel" aria-live="polite">
+      <div class="season-panel-head">
+        <h3 id="seasonTitle">Este mes</h3>
+        <span class="season-note" id="seasonNote"></span>
+      </div>
+      <div class="season-cols">
+        <div class="season-col">
+          <h4>Frutas <span class="n" id="nFruits">0</span></h4>
+          <ul class="pills" id="listFruits"></ul>
+        </div>
+        <div class="season-col">
+          <h4>Verduras y hortalizas <span class="n" id="nVeg">0</span></h4>
+          <ul class="pills veg" id="listVeg"></ul>
+        </div>
+      </div>
+      <div class="season-cta">
+        <p>¿Te apetece algo de la lista? Resérvalo en nuestra tienda online.</p>
+        <a class="btn btn-primary" href="tienda.html">Verlo en la tienda online</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERVICIOS ===================== -->
+<section class="services section" id="servicios">
+  <div class="container">
+    <span class="eyebrow reveal">Servicios</span>
+    <h2 class="section-title reveal" style="--d:.06s">Te lo ponemos <em>fácil.</em></h2>
+    <p class="section-lead reveal" style="--d:.12s">Porque no siempre da tiempo a pasar por la tienda, adaptamos el servicio a tu día a día.</p>
+
+    <div class="services-grid">
+      <article class="service reveal" style="--c:var(--leaf)">
+        <span class="num">01</span>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+        <h3>Pedidos por encargo</h3>
+        <p>Mándanos tu lista por WhatsApp o llámanos y te lo dejamos preparado para que solo tengas que recogerlo.</p>
+      </article>
+      <article class="service reveal" style="--d:.1s;--c:var(--orange)">
+        <span class="num">02</span>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <h3>Entrega a domicilio</h3>
+        <p>Te llevamos la compra a casa en Ibi. Ideal para mayores, familias con prisa o pedidos grandes.</p>
+      </article>
+      <article class="service reveal" style="--d:.2s;--c:var(--tomato)">
+        <span class="num">03</span>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12v10H4V12"/><path d="M2 7h20v5H2z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg></div>
+        <h3>Cestas de fruta para regalo</h3>
+        <p>Cumpleaños, visitas, empresas o un detalle sin más. Las montamos a tu gusto y a tu presupuesto.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== HORARIO Y UBICACIÓN ===================== -->
+<section class="visit section" id="visitanos">
+  <div class="container">
+    <span class="eyebrow reveal">Horario y ubicación</span>
+    <h2 class="section-title reveal" style="--d:.06s">Ven a <em>vernos.</em></h2>
+    <p class="section-lead reveal" style="--d:.12s">Estamos en pleno Ibi, en la calle Jaime I el Conquistador. Pásate, que siempre hay algo nuevo en las cajas.</p>
+
+    <div class="visit-grid">
+      <div class="hours-card reveal from-left">
+        <div class="status" id="status">
+          <span class="light" aria-hidden="true"></span>
+          <div><strong id="statusText">Consultando…</strong><span id="statusSub">Horario de la tienda</span></div>
+        </div>
+        <ul class="days" id="days"></ul>
+      </div>
+
+      <div class="map-card reveal from-right">
+        <iframe title="Mapa: Frutería Jiménez, C. Jaime I el Conquistador 42, Ibi"
+          src="https://maps.google.com/maps?q=C.%20Jaime%20I%20el%20Conquistador%2042%2C%2003440%20Ibi%2C%20Alicante&z=17&output=embed"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        <div class="map-info">
+          <div class="addr">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div><strong>C. Jaime I el Conquistador, 42</strong><span>03440 Ibi, Alicante</span></div>
+          </div>
+          <div class="map-actions">
+            <a class="btn btn-green" target="_blank" rel="noopener"
+               href="https://www.google.com/maps/dir/?api=1&destination=C.%20Jaime%20I%20el%20Conquistador%2042%2C%2003440%20Ibi%2C%20Alicante">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+              Cómo llegar
+            </a>
+            <a class="btn btn-primary js-tel" href="#">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Llamar
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA FINAL ===================== -->
+<section class="final-cta">
+  <div class="container">
+    <div class="final-box reveal zoom">
+      <h2>¿Lo preparamos <em>para ti?</em></h2>
+      <p>Elige en nuestra tienda online y te lo dejamos listo para recoger o te lo llevamos a casa en Ibi.</p>
+      <a class="btn" href="tienda.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h14l-1.5 9.5a2 2 0 0 1-2 1.5h-7a2 2 0 0 1-2-1.5z"/><path d="M9 10l3-6 3 6"/><path d="M3 10h18"/></svg>
+        Ir a la tienda online
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="#inicio" class="wordmark"><span>Frutería Jiménez<span class="dot">.</span></span></a>
+        <p class="tag">Fruta y verdura fresca, de temporada y de proximidad. Con el trato de toda la vida.</p>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+            <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=C.%20Jaime%20I%20el%20Conquistador%2042%2C%2003440%20Ibi%2C%20Alicante">C. Jaime I el Conquistador, 42<br>03440 Ibi, Alicante</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a class="js-tel js-phone-text" href="#">[número]</a></li>
+          <li><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2z"/></svg>
+            <a class="js-wa" href="#" target="_blank" rel="noopener">WhatsApp</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Horario</h4>
+        <ul>
+          <li>Lun – Vie: 8:00–14:00 · 17:00–20:00</li>
+          <li>Sábado: 9:00–14:00</li>
+          <li>Domingo: cerrado</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Frutería Jiménez · Ibi (Alicante). Todos los derechos reservados.</span>
+      <span><a href="legal.html#aviso-legal">Aviso legal</a> · <a href="legal.html#privacidad">Privacidad</a> · <a href="legal.html#cookies">Cookies</a> · <a href="#inicio">Volver arriba ↑</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== BOTÓN FLOTANTE ===================== -->
+<a class="fab" href="tienda.html" aria-label="Ir a la tienda online">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h14l-1.5 9.5a2 2 0 0 1-2 1.5h-7a2 2 0 0 1-2-1.5z"/><path d="M9 10l3-6 3 6"/><path d="M3 10h18"/></svg>
+  Tienda online
+</a>
+
+<script>
+/* =========================================================
+   ⚠️ CONFIGURACIÓN: PON AQUÍ EL TELÉFONO / WHATSAPP
+   Escribe solo los 9 dígitos, sin espacios ni prefijo +34.
+   Ejemplo: const TELEFONO = "612345678";
+   ========================================================= */
+const TELEFONO = "[número]";
+const MENSAJE_WHATSAPP = "Hola, tengo una consulta";
+
+(function(){
+  "use strict";
+
+  /* ---------- Enlaces de teléfono y WhatsApp ---------- */
+  const digits = TELEFONO.replace(/\D/g, "");
+  const tel = digits || TELEFONO;
+  const pretty = digits.length === 9
+    ? digits.replace(/(\d{3})(\d{2})(\d{2})(\d{2})/, "$1 $2 $3 $4")
+    : TELEFONO;
+
+  document.querySelectorAll(".js-wa").forEach(a => {
+    const msg = a.dataset.msg || MENSAJE_WHATSAPP;
+    a.href = "https://wa.me/34" + tel + "?text=" + encodeURIComponent(msg);
+  });
+  document.querySelectorAll(".js-tel").forEach(a => { a.href = "tel:+34" + tel; });
+  document.querySelectorAll(".js-phone-text").forEach(el => { el.textContent = pretty; });
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  /* ---------- Cabecera y menú móvil ---------- */
+  const header = document.getElementById("header");
+  const onScroll = () => header.classList.toggle("scrolled", window.scrollY > 40);
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
+
+  const menuBtn = document.getElementById("menuBtn");
+  const setMenu = open => {
+    document.body.classList.toggle("menu-open", open);
+    menuBtn.setAttribute("aria-expanded", open);
+    menuBtn.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+  };
+  menuBtn.addEventListener("click", () => setMenu(!document.body.classList.contains("menu-open")));
+  document.querySelectorAll("#mobileMenu a").forEach(a => a.addEventListener("click", () => setMenu(false)));
+  document.addEventListener("keydown", e => { if (e.key === "Escape") setMenu(false); });
+
+  /* ---------- Animaciones al hacer scroll ---------- */
+  const reveals = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add("visible"); io.unobserve(entry.target); }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    reveals.forEach(el => io.observe(el));
+  } else {
+    reveals.forEach(el => el.classList.add("visible"));
+  }
+
+  /* ---------- Microinteracción "tap" en tarjetas (móvil) ---------- */
+  document.querySelectorAll(".card").forEach(card => {
+    card.addEventListener("touchstart", () => {
+      document.querySelectorAll(".card.tapped").forEach(c => c !== card && c.classList.remove("tapped"));
+      card.classList.add("tapped");
+    }, { passive: true });
+  });
+
+  /* ---------- Hora local de Ibi (Europe/Madrid) ---------- */
+  function nowInMadrid(){
+    try {
+      const parts = new Intl.DateTimeFormat("en-GB", {
+        timeZone: "Europe/Madrid", weekday: "short", hour: "2-digit", minute: "2-digit", month: "numeric", hour12: false
+      }).formatToParts(new Date());
+      const get = t => parts.find(p => p.type === t).value;
+      const wd = { Sun:0, Mon:1, Tue:2, Wed:3, Thu:4, Fri:5, Sat:6 }[get("weekday")];
+      return { day: wd, minutes: (parseInt(get("hour"),10) % 24) * 60 + parseInt(get("minute"),10), month: parseInt(get("month"),10) - 1 };
+    } catch (e) {
+      const d = new Date();
+      return { day: d.getDay(), minutes: d.getHours() * 60 + d.getMinutes(), month: d.getMonth() };
+    }
+  }
+
+  /* ---------- Horario y estado Abierto/Cerrado ---------- */
+  // Índice 0 = domingo … 6 = sábado. Tramos en minutos desde las 00:00.
+  const H = (h, m = 0) => h * 60 + m;
+  const SCHEDULE = {
+    0: [],
+    1: [[H(8), H(14)], [H(17), H(20)]],
+    2: [[H(8), H(14)], [H(17), H(20)]],
+    3: [[H(8), H(14)], [H(17), H(20)]],
+    4: [[H(8), H(14)], [H(17), H(20)]],
+    5: [[H(8), H(14)], [H(17), H(20)]],
+    6: [[H(9), H(14)]]
+  };
+  const DAY_NAMES = ["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"];
+  const ORDER = [1,2,3,4,5,6,0];
+  const fmt = m => Math.floor(m / 60) + ":" + String(m % 60).padStart(2, "0");
+
+  function renderHours(){
+    const now = nowInMadrid();
+    const list = document.getElementById("days");
+    list.innerHTML = "";
+    ORDER.forEach(d => {
+      const slots = SCHEDULE[d];
+      const li = document.createElement("li");
+      li.className = "day" + (slots.length ? "" : " off") + (d === now.day ? " today" : "");
+      li.innerHTML = '<span class="d">' + DAY_NAMES[d] + '</span><span class="h">' +
+        (slots.length ? slots.map(s => fmt(s[0]) + "–" + fmt(s[1])).join(" · ") : "Cerrado") + "</span>";
+      list.appendChild(li);
+    });
+
+    const today = SCHEDULE[now.day];
+    const current = today.find(s => now.minutes >= s[0] && now.minutes < s[1]);
+    const status = document.getElementById("status");
+    const text = document.getElementById("statusText");
+    const sub = document.getElementById("statusSub");
+    const heroStatus = document.getElementById("heroStatus");
+
+    if (current) {
+      const left = current[1] - now.minutes;
+      status.classList.remove("closed");
+      text.textContent = "Abierto ahora";
+      sub.textContent = left <= 30 ? "¡Date prisa! Cerramos a las " + fmt(current[1]) : "Hoy cerramos a las " + fmt(current[1]);
+      heroStatus.textContent = "Abierto ahora · hasta las " + fmt(current[1]);
+    } else {
+      status.classList.add("closed");
+      text.textContent = "Cerrado ahora";
+      // Buscar próxima apertura
+      let next = null;
+      const later = today.find(s => s[0] > now.minutes);
+      if (later) next = "Abrimos hoy a las " + fmt(later[0]);
+      else {
+        for (let i = 1; i <= 7; i++) {
+          const d = (now.day + i) % 7;
+          if (SCHEDULE[d].length) {
+            next = "Abrimos " + (i === 1 ? "mañana" : "el " + DAY_NAMES[d].toLowerCase()) + " a las " + fmt(SCHEDULE[d][0][0]);
+            break;
+          }
+        }
+      }
+      sub.textContent = next;
+      heroStatus.textContent = "Cerrado · " + next.charAt(0).toLowerCase() + next.slice(1);
+    }
+  }
+  renderHours();
+  setInterval(renderHours, 60 * 1000);
+
+  /* ---------- Fruta y verdura de temporada (España, zona mediterránea) ---------- */
+  const SEASON = [
+    { m:"Enero",      f:[["🍊","Naranja"],["🍊","Mandarina"],["🍋","Limón"],["🥝","Kiwi"],["🍐","Pera"],["🍎","Manzana"],["🍈","Chirimoya"],["🍌","Plátano"]],
+                      v:[["🥬","Acelga"],["🥦","Brócoli"],["🥬","Col"],["🥦","Coliflor"],["🌿","Alcachofa"],["🥕","Zanahoria"],["🥬","Escarola"],["🧅","Puerro"],["🥬","Espinaca"]] },
+    { m:"Febrero",    f:[["🍊","Naranja"],["🍊","Mandarina"],["🍋","Limón"],["🥝","Kiwi"],["🍐","Pera"],["🍎","Manzana"],["🍌","Plátano"],["🍊","Pomelo"]],
+                      v:[["🌿","Alcachofa"],["🥦","Brócoli"],["🥦","Coliflor"],["🥬","Espinaca"],["🥬","Acelga"],["🥕","Zanahoria"],["🧅","Puerro"],["🌱","Habas"],["🥬","Lechuga"]] },
+    { m:"Marzo",      f:[["🍊","Naranja"],["🍋","Limón"],["🍓","Fresa"],["🥝","Kiwi"],["🍐","Pera"],["🍎","Manzana"],["🍌","Plátano"],["🍊","Pomelo"]],
+                      v:[["🌿","Alcachofa"],["🌱","Habas"],["🫛","Guisantes"],["🌿","Espárrago"],["🥬","Lechuga"],["🥬","Espinaca"],["🥕","Zanahoria"],["🧅","Ajo tierno"],["🥬","Acelga"]] },
+    { m:"Abril",      f:[["🍓","Fresa"],["🍊","Naranja"],["🍋","Limón"],["🍌","Plátano"],["🍎","Manzana"],["🍐","Níspero"],["🥝","Kiwi"]],
+                      v:[["🌿","Espárrago"],["🫛","Guisantes"],["🌱","Habas"],["🌿","Alcachofa"],["🥬","Lechuga"],["🫑","Judía verde"],["🥕","Zanahoria"],["🧅","Cebolla tierna"],["🥒","Pepino"]] },
+    { m:"Mayo",       f:[["🍓","Fresa"],["🍒","Cereza"],["🍐","Níspero"],["🍑","Albaricoque"],["🍌","Plátano"],["🍋","Limón"],["🍈","Melón (primeros)"]],
+                      v:[["🌿","Espárrago"],["🫛","Guisantes"],["🫑","Judía verde"],["🥒","Calabacín"],["🥒","Pepino"],["🥬","Lechuga"],["🍅","Tomate"],["🧅","Cebolla"],["🥔","Patata nueva"]] },
+    { m:"Junio",      f:[["🍒","Cereza"],["🍑","Albaricoque"],["🍑","Melocotón"],["🍑","Nectarina"],["🍉","Sandía"],["🍈","Melón"],["🫐","Ciruela"],["🍓","Fresa"]],
+                      v:[["🍅","Tomate"],["🥒","Calabacín"],["🥒","Pepino"],["🫑","Pimiento"],["🍆","Berenjena"],["🫑","Judía verde"],["🥬","Lechuga"],["🧄","Ajo"],["🥔","Patata"]] },
+    { m:"Julio",      f:[["🍉","Sandía"],["🍈","Melón"],["🍑","Melocotón"],["🍑","Paraguayo"],["🍑","Nectarina"],["🫐","Ciruela"],["🍐","Pera"],["🍑","Albaricoque"]],
+                      v:[["🍅","Tomate"],["🫑","Pimiento"],["🍆","Berenjena"],["🥒","Calabacín"],["🥒","Pepino"],["🫑","Judía verde"],["🌽","Maíz"],["🧄","Ajo"],["🧅","Cebolla"]] },
+    { m:"Agosto",     f:[["🍉","Sandía"],["🍈","Melón"],["🍑","Melocotón"],["🍑","Paraguayo"],["🫐","Ciruela"],["🍇","Uva"],["🟣","Higo"],["🍐","Pera"]],
+                      v:[["🍅","Tomate"],["🫑","Pimiento"],["🍆","Berenjena"],["🥒","Calabacín"],["🥒","Pepino"],["🫑","Judía verde"],["🌽","Maíz"],["🧅","Cebolla"]] },
+    { m:"Septiembre", f:[["🍇","Uva"],["🟣","Higo"],["🍐","Pera"],["🍎","Manzana"],["🍑","Melocotón"],["🍈","Melón"],["🔴","Granada"],["🫐","Ciruela"]],
+                      v:[["🍅","Tomate"],["🫑","Pimiento"],["🍆","Berenjena"],["🥒","Calabacín"],["🎃","Calabaza"],["🫑","Judía verde"],["🥬","Acelga"],["🧅","Puerro"]] },
+    { m:"Octubre",    f:[["🍇","Uva"],["🔴","Granada"],["🟠","Caqui"],["🍎","Manzana"],["🍐","Pera"],["🍊","Mandarina"],["🌰","Castaña"],["🟣","Higo"]],
+                      v:[["🎃","Calabaza"],["🥬","Acelga"],["🥬","Espinaca"],["🥦","Brócoli"],["🍄","Setas"],["🍠","Boniato"],["🧅","Puerro"],["🫑","Pimiento"],["🥕","Zanahoria"]] },
+    { m:"Noviembre",  f:[["🍊","Mandarina"],["🍊","Naranja"],["🟠","Caqui"],["🔴","Granada"],["🍎","Manzana"],["🍐","Pera"],["🥝","Kiwi"],["🍈","Chirimoya"],["🌰","Castaña"]],
+                      v:[["🎃","Calabaza"],["🍠","Boniato"],["🥦","Brócoli"],["🥦","Coliflor"],["🥬","Col"],["🌿","Alcachofa"],["🥬","Espinaca"],["🍄","Setas"],["🧅","Puerro"]] },
+    { m:"Diciembre",  f:[["🍊","Naranja"],["🍊","Mandarina"],["🥝","Kiwi"],["🍈","Chirimoya"],["🍎","Manzana"],["🍐","Pera"],["🔴","Granada"],["🍌","Plátano"]],
+                      v:[["🌿","Alcachofa"],["🥦","Brócoli"],["🥦","Coliflor"],["🥬","Col"],["🥬","Cardo"],["🥬","Escarola"],["🎃","Calabaza"],["🍠","Boniato"],["🧅","Puerro"]] }
+  ];
+
+  const currentMonth = nowInMadrid().month;
+  const monthsEl = document.getElementById("months");
+
+  function renderSeason(idx){
+    const s = SEASON[idx];
+    const isNow = idx === currentMonth;
+    document.getElementById("seasonTitle").innerHTML = isNow
+      ? "Este mes: <em>" + s.m.toLowerCase() + "</em>"
+      : "En <em>" + s.m.toLowerCase() + "</em>";
+    document.getElementById("seasonNote").textContent = isNow
+      ? "Actualizado automáticamente según la fecha"
+      : "Mostrando otro mes · el de hoy está marcado con un punto";
+    const fill = (id, items) => {
+      const ul = document.getElementById(id);
+      ul.innerHTML = "";
+      items.forEach((it, i) => {
+        const li = document.createElement("li");
+        li.style.animationDelay = (i * 0.045) + "s";
+        li.innerHTML = '<span class="e" aria-hidden="true">' + it[0] + "</span>" + it[1];
+        ul.appendChild(li);
+      });
+    };
+    fill("listFruits", s.f);
+    fill("listVeg", s.v);
+    document.getElementById("nFruits").textContent = s.f.length;
+    document.getElementById("nVeg").textContent = s.v.length;
+    monthsEl.querySelectorAll(".month-chip").forEach((c, i) => {
+      c.classList.toggle("active", i === idx);
+      c.setAttribute("aria-selected", i === idx);
+    });
+  }
+
+  SEASON.forEach((s, i) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.className = "month-chip" + (i === currentMonth ? " now" : "");
+    b.setAttribute("role", "tab");
+    b.textContent = s.m;
+    b.addEventListener("click", () => renderSeason(i));
+    monthsEl.appendChild(b);
+  });
+  renderSeason(currentMonth);
+  // Centrar el mes actual en el carrusel móvil
+  const activeChip = monthsEl.children[currentMonth];
+  if (activeChip && monthsEl.scrollWidth > monthsEl.clientWidth) {
+    monthsEl.scrollLeft = activeChip.offsetLeft - monthsEl.clientWidth / 2 + activeChip.clientWidth / 2;
+  }
+})();
+</script>
+</body>
+</html>
